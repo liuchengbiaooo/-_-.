@@ -1,0 +1,29 @@
+<i-cell title="{{business.web_site_title}}">
+  <i-icon type="computer" i-class="slfews" slot="icon" />
+</i-cell>
+
+<swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" duration="{{duration}}" interval='{{interval}}' bindchange="bindchange"  circular="{{circular}}" style="height:{{imgheights[current]}}rpx;">
+  <block wx:for="{{banners}}" wx:for-item="banner" wx:key='key'>
+    <swiper-item>
+        <image src="{{banner}}" data-id='{{index}}' class="slide-image" mode="widthFix" bindload="imageLoad"/> 
+    </swiper-item>
+  </block>
+</swiper>
+
+<i-cell i-class="vsvda" title="{{business.web_site_desc}}"></i-cell>
+
+<i-cell i-class="vsvda" bind:click="btnAnquanda" title="查看企业相关资质" is-link>
+  <i-icon type="document" i-class="slfews" slot="icon" />
+</i-cell>
+
+<i-cell i-class="vsvda" bind:click="btnPhone" title="联系电话：" value="{{business.web_phone}}" is-link>
+  <i-icon type="mobilephone" i-class="slfews" slot="icon" />
+</i-cell>
+
+<i-cell i-class="vsvda" title="工作时间：" value="{{business.web_site_keyword}}">
+  <i-icon type="clock" i-class="slfews" slot="icon" />
+</i-cell>
+
+<i-cell i-class="vsvda" bind:click="btnMap" title="{{business.web_address}}" is-link>
+  <i-icon type="coordinates" i-class="slfews" slot="icon" />
+</i-cell>

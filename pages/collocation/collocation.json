@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "托管",
+    "usingComponents": {
+        "i-toast": "../dist/toast/index"
+    }
+}

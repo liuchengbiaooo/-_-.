@@ -1,0 +1,19 @@
+<view class="demos-header">
+  	<view class="demos-title">兑换提交成功</view>
+  	<span>恭喜您，成功兑换了“{{name}}”</span>
+    <view>
+      <span>请凭兑换码到店兑换</span>
+    </view>
+    <view>
+      <span>兑换码：{{exchNumber}}</span>
+    </view>
+</view>
+
+<i-row>
+  <i-col span="12" i-class="col-class">
+    <i-button bind:click="handleClick" type="info" size="small">回到首页</i-button>
+  </i-col>
+  <i-col span="12" i-class="col-class">
+    <i-button bind:click="btnOrderPay" type="success" size="small">查看我的礼品单</i-button>
+  </i-col>
+</i-row>

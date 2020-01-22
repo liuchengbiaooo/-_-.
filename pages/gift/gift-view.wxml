@@ -1,0 +1,33 @@
+<block wx:if="{{showPage}}">
+  <view class="weui-msg">
+    <view class="weui-msg__icon-area"><icon class="icon-box-img" type="info" size="93"></icon></view>
+    <view class="weui-msg__text-area">
+      <view class="weui-msg__title">暂时没有可兑换的礼品~</view>
+    </view>
+  </view>
+</block>
+
+<view class='clllxv'>
+  <view class='lcvlvswv'>
+    <i-row>
+      <block wx:for="{{gifts}}" wx:for-item="item" wx:key='key'>
+        <i-col span="12" i-class="col-class">
+          <navigator url="/pages/gift/detail/gift-detail?giftId={{item.id}}" hover-class="navigator-hover">
+            <view class='shuffing-mask'>
+              <image src="{{item.imageName}}"></image>
+              <view class='slcvvv'>
+                <text>学分兑换</text>
+              </view>
+              <view class='sfasdfwefwe_sdfe vvswsf'>
+                <text>{{item.giftName}}</text>
+              </view>
+              <view class='sfasdfwefwe_sdfe fvwefvwe'>
+                <i-icon type="redpacket" i-class="vsdvsdf" size="18" color="#008B45"/><text>{{item.exchangePoints}}</text>
+              </view>
+            </view>
+          </navigator>
+        </i-col>
+      </block>
+    </i-row>
+  </view>
+</view>

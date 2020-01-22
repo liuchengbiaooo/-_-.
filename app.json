@@ -1,0 +1,96 @@
+{
+  "pages": [
+    "pages/guide/guide",
+    "pages/teacherLogin/teacherLogin",
+    "pages/personalCenter/personalCenter",
+    "pages/studentList/studentList",
+    "pages/bindingIDTwo/bindingIDTwo",
+    "pages/columnDetails/columnDetails",
+    "pages/classroom/classroom",
+    "pages/interest/interest",
+    "pages/index/index",
+    "pages/courseParticulars/courseParticulars",
+    "pages/interestStudies/interestStudies",
+    "pages/account/account",
+    "pages/order/checkout/checkout",
+    "pages/meals/meals",
+    "pages/bindingID/bindingID",
+    "pages/roleChoices/roleChoices",
+    "pages/collocation/collocation",
+    "pages/authorize/authorize",
+    "pages/order/order-success/order-success",
+    "pages/order/view/order-list",
+    "pages/abroad/abroad",
+    "pages/sell/checkout/checkout",
+    "pages/shpto/shpto",
+    "pages/shpto-form/shpto-form",
+    "pages/sell/order-success/order-success",
+    "pages/sell/view/order-list",
+    "pages/sell/order-detail/order-detail",
+    "pages/foodmenu/foodmenu",
+    "pages/product/product",
+    "pages/reserve/reserve",
+    "pages/reserve/success/success",
+    "pages/reserve/view/view",
+    "pages/aboutus/aboutus",
+    "pages/order-comment/order-comment",
+    "pages/reserve/ordering/ordering",
+    "pages/points/points",
+    "pages/points/signin/signin",
+    "pages/gift/gift-view",
+    "pages/gift/detail/gift-detail",
+    "pages/gift/exchange/exchange",
+    "pages/gift/success/success",
+    "pages/gift/view/mygift",
+    "pages/cardvoucher/coupon/coupon",
+    "pages/cardvoucher/mycard/card-view",
+    "pages/promotion/promotion",
+    "pages/promotion/details/details",
+    "pages/promotion/shop/shop-promotion",
+    "pages/promotion/order-success/order-success",
+    "pages/search/search",
+    "pages/mechanism/enter",
+    "pages/mechanism/success/success",
+    "pages/nutritious/nutritious",
+    "pages/teacherCourseDetails/teacherCourseDetails"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#909090",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/icon_nav_button.png",
+        "selectedIconPath": "image/icon_nav_button_a.png",
+        "text": "课堂首页"
+      },
+      {
+        "pagePath": "pages/order/view/order-list",
+        "iconPath": "image/icon_nav_article.png",
+        "selectedIconPath": "image/icon_nav_article_a.png",
+        "text": "课程列表"
+      },
+      {
+        "pagePath": "pages/account/account",
+        "iconPath": "image/icon_nav_cell.png",
+        "selectedIconPath": "image/icon_nav_cell_a.png",
+        "text": "课堂中心"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

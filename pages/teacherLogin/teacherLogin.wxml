@@ -1,0 +1,76 @@
+<view class='teacherLogin'>
+    <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" duration="{{duration}}" interval='{{interval}}' bindchange="bindchange" circular="{{circular}}" style="height:{{imgheights[current] - 24}}rpx; padding:0 12px;">
+        <block wx:for="{{banners}}" wx:for-item="banner" wx:key='key'>
+            <swiper-item>
+                <navigator url="/pages/foodmenu/foodmenu" hover-class="navigator-hover">
+                <!--  bindload="imageLoad"  -->
+                    <image src="{{banner.url}}" data-id='{{index}}' class="svswgvvbtef" mode="widthFix"/>
+                </navigator>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class='csgbbdb'>
+        <view class="curriculum">
+            <!-- <view class="curriculum_text" wx:for="{{categorys}}" wx:for-item="category" wx:key='key'>
+                <view wx:if="{{category.id == '27' || category.id == '28'}}">
+                    <navigator url="/pages/interestStudies/interestStudies?categoryId={{category.id}}" hover-class="none">
+                        <image src="{{category.icon}}" mode="widthFix" class="curriculum_img"></image>
+                        <view>{{category.name}}</view>
+                    </navigator>
+                </view>
+                <view wx:else>
+                    <navigator url="/pages/meals/meals?categoryId={{category.id}}" hover-class="none">
+                        <image src="{{category.icon}}" mode="widthFix" class="curriculum_img"></image>
+                        <view>{{category.name}}</view>
+                    </navigator>
+                </view>
+            </view> -->
+            <!-- <view class="curriculum_text">
+                <view>
+                    <navigator  hover-class="none">
+                        <image src="../../image/kebiao.jpg" mode="widthFix" class="curriculum_img"></image>
+                        <view>我的课表</view>
+                    </navigator>
+                </view>
+            </view> -->
+            <view class="curriculum_text" style="margin-left: 80rpx;">
+                <view>
+                    <navigator url="/pages/classroom/classroom" hover-class="none">
+                        <image src="../../image/ketang.jpg" mode="widthFix" class="curriculum_img"></image>
+                        <view>课堂风采</view>
+                    </navigator>
+                </view>
+            </view>
+            <view class="curriculum_text" style="margin-right: 80rpx;">
+                <view>
+                    <navigator url="/pages/personalCenter/personalCenter" hover-class="none">
+                        <image src="../../image/geren.jpg" mode="widthFix" class="curriculum_img"></image>
+                        <view>个人中心</view>
+                    </navigator>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="column">
+        <view class="column_lift">
+            <view class="column_lift_font">教师专栏</view>
+            <view >Teachers' column</view>
+        </view>
+        <view class="column_right">
+            <text >更多</text>
+            <image src="../../image/rightjiantou.png" class="column_right_img"/>
+        </view>
+    </view>
+    <view>
+        <view  class="explain" wx:for="{{teachersColumnList}}" wx:for-item="item" wx:key="index" data-id="{{item.id}}" bindtap="columnDetails">
+            <image  src="{{item.icon}}" class="explain_img"/>
+            <view class="explain_right">
+                <view  class="explain_right_bold">{{item.title}}</view>
+                <view >{{item.synopsis}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="teacherLogin_bottom">
+       <view class="teacherLogin_bottom_txt">到底了</view>
+    </view>
+</view>

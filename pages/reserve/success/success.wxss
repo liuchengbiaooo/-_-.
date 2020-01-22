@@ -1,0 +1,21 @@
+.demos-header {
+    padding: 35px 0;
+}
+.demos-title {
+    text-align: center;
+    font-size: 34px;
+    color: #3cc51f;
+    font-weight: 400;
+    margin: 0 15%;
+}
+.demos-header span {
+    padding: 0 12px;
+    color: #f00;
+    display: block;
+    text-align: center;
+}
+.slcc {
+  color: #f00;
+  text-align: center;
+  font-size: 14px;
+}

@@ -1,0 +1,81 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.4.3",
+	"appid": "wx25c41ad519809d85",
+	"projectname": "diancan",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 4,
+			"list": [
+				{
+					"id": 0,
+					"name": "扫码进入",
+					"pathName": "pages/index/index",
+					"query": "scene=11号",
+					"scene": "1011"
+				},
+				{
+					"id": -1,
+					"name": "在线点餐",
+					"pathName": "pages/meals/meals",
+					"query": "scene=11",
+					"scene": "1011"
+				},
+				{
+					"id": -1,
+					"name": "在线点餐-订单结算",
+					"pathName": "pages/order/checkout/checkout",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "订单提交成功",
+					"pathName": "pages/order/order-success/order-success",
+					"query": "orderNumber=DY00000142",
+					"scene": "1011"
+				},
+				{
+					"id": 4,
+					"name": "商品介绍",
+					"pathName": "pages/product/product",
+					"query": "prodId=54",
+					"scene": "1011"
+				}
+			]
+		}
+	}
+}

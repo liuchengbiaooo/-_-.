@@ -1,0 +1,62 @@
+page {
+  background-color: #F5F5F5;
+}
+.head_slcc {
+  height: 80px;
+  background-color: #FF69B4;
+  padding-top: 16px;
+  color: #fff;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin-left: 40rpx;
+  border-radius: 50%;
+}
+.ssdsfvfv {
+  font-size: 14px;
+  margin-left: 49rpx;
+  margin-top: 30rpx;
+}
+.lclsdfw {
+  font-size: 14px;
+}
+.vsgvc {
+  text-align: center;
+  margin-top:25rpx;
+}
+.shouzhifming {
+  font-size: 14px;
+}
+.titlessc {
+  text-align: center;
+  font-weight:600;
+  line-height:45px;
+}
+.lsfos {
+  background-color: #fff;
+  padding: 10px;
+}
+.vlvsvv {
+  border-bottom: 1px #F5F5F5 solid;
+  padding: 8px 0;
+}
+.jifelss {
+  text-align: right;
+  padding-top: 10px;
+  font-weight: bold;
+}
+.shouru {
+  color: #FF4500;
+}
+.zhichu {
+  color: #3CB371;
+}
+.jifen_title {
+  font-size: 14px;
+  font-weight: bold;
+}
+.jifen_date {
+  font-size: 12px;
+  color: #ccc;
+}

@@ -1,0 +1,69 @@
+<i-message id="message" />
+<wxs module="numberUtil" src="../../dist/number.wxs"></wxs>
+
+<form bindsubmit="formSubmit" bindreset="formReset" report-submit='true'>
+<view class='slpwcll'>
+  <i-input i-class="sdfcv" value="{{ name }}" name="name" title="姓名" placeholder="请输入您的名字" />
+  <i-input i-class="sdfcv" value="{{ phone }}" name="phone" type="number" title="手机号码" placeholder="请输入手机号" />
+</view>
+
+<view class='dsloiefzc'>
+  <view class='wofweg'>我的课程</view>
+  <view class='pvwrfv' wx:for="{{cart}}" wx:for-item="item" wx:key='key'>
+    <i-row>
+      <i-col span="6" i-class="col-class">
+        <image src="{{item.icon}}" class='asdw' mode="widthFix"></image>
+      </i-col>
+      <i-col span="10" i-class="col-class">
+        <view>{{item.courseName}}</view>
+        <view>x{{item.num}}</view>
+      </i-col>
+      <i-col span="8" i-class="col-class wfggbb">
+        ￥{{item.total}}元
+      </i-col>
+    </i-row>
+  </view>
+  <block wx:if="{{isvoucher}}">
+    <picker mode="selector" bindchange="bindRegionChange" value="{{index}}" range-key="title" range="{{voucher}}">
+      <i-cell title="可使用的优惠券" label="{{voucher[index].title}}" is-link i-class="vvvsdf fsdfsg"></i-cell>
+    </picker>
+    <view class='wocpsc'>
+      合计报名费：￥{{numberUtil.numberFormat(cart.totalAmount - voucher[index].amount)}}元
+      ，<text>优惠金额：{{voucher[index].amount}}元</text>
+    </view>
+  </block>
+  <block wx:else>
+    <view class='wocpsc'>
+      合计报名费：￥{{aggregate}}元
+    </view>
+  </block>
+  
+</view>
+
+<view class='dsloiefzc'>
+  <i-row>
+    <i-col span="3" i-class="col-class wgwgsc">
+      备注
+    </i-col>
+    <i-col span="21" i-class="col-class">
+      <input name="remark" maxlength="300" placeholder="" />
+    </i-col>
+  </i-row>
+</view>
+<view class='clvlsdd'></view>
+<view class='coweflcs'>
+  <i-row>
+    <i-col span="18" i-class="col-class sfwgsac">
+      <block wx:if="{{isvoucher}}">
+        合计：<text class='cwrewf'>￥{{numberUtil.numberFormat(cart.totalAmount - voucher[index].amount)}}</text> 元
+      </block>
+      <block wx:else>
+        合计：<text class='cwrewf'>￥{{aggregate}}</text> 元
+      </block>
+    </i-col>
+    <i-col span="6" i-class="col-class csfwefvz">
+      <button class="xuanhaole" formType="submit">确认</button>
+    </i-col>
+  </i-row>
+</view>
+</form>

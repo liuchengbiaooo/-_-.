@@ -1,0 +1,29 @@
+<i-message id="message" />
+<form bindsubmit="formSubmit" bindreset="formReset" report-submit='true'>
+  <view class='dsloiefzc'>
+    <view class='wofweg'>礼品单</view>
+    <view class='pvwrfv'>
+      <i-row>
+        <i-col span="6" i-class="col-class">
+          <image src="{{gift.imageName}}" class='asdw' mode="widthFix"></image>
+        </i-col>
+        <i-col span="18" i-class="col-class vvwff">
+          <view>{{gift.giftName}}</view>
+          <view class='waccv'>学分：<text>{{gift.exchangePoints}}</text></view>
+          <view class='waccv'>库存：<text>{{gift.quantity}}</text></view>
+        </i-col>
+      </i-row>
+    </view>
+
+    <view class='wocpsc'>
+      <i-input i-class="dinllss" name="contactName" value="{{ contactName }}" title="联系人" autofocus placeholder="名字" />
+      <i-input i-class="dinllss" name="mobile" value="{{ mobile }}" type="number" title="手机号码" autofocus placeholder="输入您的手机号码" />
+    </view>
+
+    <view class='waccv wefwswf'>我的学分：<text>{{points}}</text></view>
+    <view class='vwsedwacv'>
+      <button class="xuanhaole" formType="submit">确认兑换</button>
+    </view>
+  </view>
+
+</form>

@@ -1,0 +1,15 @@
+<view class="demos-header">
+    <view class="demos-title">选课提交成功</view>
+</view>
+
+<i-cell title="联系人姓名" value="{{reserve.name}}"></i-cell>
+<i-cell title="联系人手机号" value="{{reserve.phone}}"></i-cell>
+
+<i-row>
+  <i-col span="12" i-class="col-class">
+    <i-button bind:click="handleClick" type="info" size="small">回到首页</i-button>
+  </i-col>
+  <i-col span="12" i-class="col-class">
+    <i-button bind:click="" open-type="contact" type="success" size="small">在线顾问</i-button>
+  </i-col>
+</i-row>

@@ -1,0 +1,11 @@
+{
+    "navigationBarBackgroundColor": "#FF4500",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "每日签到",
+    "backgroundTextStyle": "light",
+    "usingComponents": {
+        "i-row": "../../dist/row/index",
+        "i-col": "../../dist/col/index",
+        "i-icon": "../../dist/icon/index"
+    }
+}

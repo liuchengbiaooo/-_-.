@@ -1,0 +1,65 @@
+page {
+    background-color: #7CE1F3;
+}
+
+.bindID_head>image {
+    width: 250rpx;
+    height: 250rpx;
+    margin-bottom: 20rpx;
+}
+
+.bindID_head {
+    box-sizing: border-box;
+    margin-top: 140rpx;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 26rpx;
+    color: #fff;
+}
+
+.bindID_table {
+    box-sizing: border-box;
+    height: 210rpx;
+    margin: 30rpx 15rpx 25rpx 15rpx;
+    border-radius: 25rpx;
+    background-color: #fff;
+}
+
+.table_line {
+    display: flex;
+    margin: 0rpx 50rpx;
+    border-bottom: 4rpx solid #E6E6E6;
+    color: #5A5B5B;
+    height: 80rpx;
+    line-height: 100rpx;
+    font-size: 30rpx;
+}
+
+.table_line>input {
+    margin: 30rpx 0rpx 0rpx 20rpx;
+}
+
+.btn {
+    margin: 0rpx 20rpx;
+    margin-top: 70rpx;
+}
+
+.btn button {
+    height: 80rpx;
+    border-radius: 25rpx;
+    background-color: #89B4DE;
+    color: #fff;
+    font-size: 30rpx;
+}
+
+.bindID_company {
+    width: 100%;
+    position: absolute;
+    bottom: 100rpx;
+    font-size: 24rpx;
+    color: #939D9D;
+    text-align: center;
+    line-height: 40rpx;
+}

@@ -1,0 +1,24 @@
+<import src="../../../wxParse/wxParse.wxml"/>
+
+<view>
+  <image src="{{gift.imageName}}" mode="widthFix"></image>
+</view>
+
+<view class='lvwfvfvc'>
+  <view class='slf_title'>{{gift.giftName}}</view>
+  <view class='slf_title'>
+    <i-row>
+      <i-col span="12" i-class="col-class waccv">学分：<text>{{gift.exchangePoints}}</text></i-col>
+      <i-col span="12" i-class="col-class gvbwe">库存：<text>{{gift.quantity}}</text></i-col>
+    </i-row>
+  </view>
+  <view class='lcowefa'>
+    <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+  </view>
+  
+</view>
+
+<view style='height:64px;'></view>
+<view class='vwsedwacv'>
+  <i-button bind:click="btnExchange" type="error">立即兑换</i-button>
+</view>

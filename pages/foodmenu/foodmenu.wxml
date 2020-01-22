@@ -1,0 +1,73 @@
+<block wx:for="{{banners}}" wx:for-item="item" wx:for-index="idx" wx:key='key'>
+  <block wx:if="{{idx == 0}}"> 
+
+    <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" duration="{{duration}}" interval='{{interval}}' bindchange="bindchange"  circular="{{circular}}" style="height:{{imgheights[current]}}rpx;">
+      <block wx:for="{{item.items}}" wx:for-item="banner" wx:key='key'>
+        <swiper-item>
+          <navigator url="/pages/product/product?prodId={{banner.prodId}}" hover-class="navigator-hover">
+            <image src="{{banner.images}}" data-id='{{index}}' class="slide-image" mode="widthFix" bindload="imageLoad"/> 
+          </navigator>
+        </swiper-item>
+      </block>
+    </swiper>
+
+  </block>
+  <block wx:elif="{{idx == 1}}">
+    <view class='clllxv'>
+      <view class='clslflw'>
+        <view class='title'>- {{item.name}} -</view>
+      </view>
+      <view class='lcpfww'>
+        <swiper indicator-dots="{{indicatorss}}" vertical="{{vertical}}" autoplay="{{autoplayss}}" duration="{{duration}}" interval='{{interval}}' next-margin='420rpx' bindchange="bindchange"  circular="{{circular}}" style="">
+          <block wx:for="{{item.items}}" wx:for-item="item" wx:key='key'>
+            <swiper-item>
+              <navigator url="/pages/product/product?prodId={{item.prodId}}" hover-class="navigator-hover">
+                <view class='slielfs' style="margin:0 12px;">
+                  <view class='shuffing-mask'>
+                    <image src="{{item.images}}" class='slfvv'></image>
+                    <view class='sfasdfwefwe_sdfe'>
+                      <text>{{item.name}}</text>
+                      <text class='cwrewf csfv'>￥{{item.price}}</text>
+                    </view>
+                    <view class='sfasdfwefwe_sdfe sdvbbbbd'>
+                      销量：<text class='csfv'>{{item.volume}}</text>
+                    </view>
+                  </view>
+                </view>
+              </navigator>
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+
+    <view class='clllxv'>
+      <view class='clslflw'>
+        <view class='title'>- {{item.name}} -</view>
+      </view>
+      <view class='lcvlvswv'>
+        <i-row>
+          <block wx:for="{{item.items}}" wx:for-item="item" wx:key='key'>
+            <i-col span="12" i-class="col-class">
+              <navigator url="/pages/product/product?prodId={{item.prodId}}" hover-class="navigator-hover">
+                <view class='shuffing-mask'>
+                  <image src="{{item.images}}" mode="widthFix"></image>
+                  <view class='sfasdfwefwe_sdfe'>
+                    <text>{{item.name}}</text>
+                    <text class='cwrewf csfv'>￥{{item.price}}</text>
+                  </view>
+                  <view class='sfasdfwefwe_sdfe sdvbbbbd'>
+                    销量：<text class='csfv'>{{item.volume}}</text>
+                  </view>
+                </view>
+              </navigator>
+            </i-col>
+          </block>
+        </i-row>
+      </view>
+    </view>
+
+  </block>
+</block>

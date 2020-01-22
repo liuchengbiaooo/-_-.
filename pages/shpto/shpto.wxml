@@ -1,0 +1,51 @@
+<block wx:if="{{showPage}}">
+  <view class="weui-msg">
+    <view class="weui-msg__icon-area"><icon class="icon-box-img" type="info" size="93"></icon></view>
+    <view class="weui-msg__text-area">
+      <view class="weui-msg__title">您现在还没有收餐地址~</view>
+    </view>
+    <view class="weui-msg__opr-area">
+      <p class="weui-btn-area">
+        <button class="mini-btn" bindtap="btnAddAddress" type="warn" size="mini">添加一个~</button>
+      </p>
+    </view>
+  </view>
+</block>
+
+<block wx:if="{{shiptos != null}}">
+  <radio-group bindchange="radioChange">
+<block wx:for="{{shiptos}}" wx:for-item="shipto" wx:key='key'>
+
+  <view class="weui-cell weui-cell_access">
+    <view class="weui-cell__bd">
+        <view class='add_left'>{{shipto.cttName}}</view>
+        <view class='add_right'>{{shipto.phone}}</view>
+        <view class="address">{{shipto.addr}}</view>
+    </view>
+  </view>
+  <view class="add_default page-section-spacing">
+    <view class="flex-wrp" style="flex-direction:row;">
+      <view class="flex-item">
+        <label class="radio">
+          <radio value="r1" value='{{shipto.id}}' checked="true" wx:if="{{shipto.defaulted == 'Y'}}" />
+          <radio value="r1" value='{{shipto.id}}' wx:if="{{shipto.defaulted != 'Y'}}" />
+          选择
+        </label>
+      </view>
+      <view class="flex-item rights">
+        <text bindtap="btnEditAddress" data-id="{{shipto.id}}" >编辑</text>
+        <text bindtap="btnDeleteAddress" data-id="{{shipto.id}}" style='padding-left:30px;'>删除</text>
+      </view>
+    </view>
+  </view>
+
+</block>
+</radio-group>
+  <view style="text-align: center; margin-bottom: 12px;"></view>
+  <view class="brandList_con">
+    <view>
+      <button class="mini-btn" bindtap="btnAddAddress" type="warn" size="mini">添加一个</button>
+    </view>
+    (您还可以新增{{remainCreateShiptoCount}}个收货地址)
+  </view>
+</block>

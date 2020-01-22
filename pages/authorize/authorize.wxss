@@ -1,0 +1,50 @@
+/**index.wxss**/
+page {
+  height: auto;
+}
+.userinfo {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+}
+.userinfo image {
+  width: 60px;
+  height: 60px;
+}
+button[size=mini] {
+  display: block;
+}
+.authorizessl {
+  border-top: 1px solid #ccc;
+  padding-top: 30px;
+  margin-top: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+}
+.gongkaixix {
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  padding: 30px;
+  text-align: left;
+}
+
+.btnCancelAuthorize {
+  margin-top: 10px;
+}

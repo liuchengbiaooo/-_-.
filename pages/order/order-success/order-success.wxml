@@ -1,0 +1,20 @@
+<view class="demos-header">
+  	<view class="demos-title">报名提交成功</view>
+  	<span>请您在30分钟时间之内完成缴费支付</span>
+    <view class='slcc'>过时未缴费报名自动取消</view>
+</view>
+
+<i-cell title="缴费金额" value="{{order.price}}"></i-cell>
+<i-cell title="报名编号" value="{{order.orderNo}}"></i-cell>
+<i-cell title="缴费状态" value="{{order.payStatus}}"></i-cell>
+<i-cell title="提交时间" value="{{order.createTime}}"></i-cell>
+
+<i-row>
+  <i-col span="12" i-class="col-class">
+    <i-button bind:click="handleClick" type="info" size="small">回到首页</i-button>
+  </i-col>
+  <i-col span="12" i-class="col-class">
+    <i-button bind:click="btnOrderPay" type="success" size="small">去缴费</i-button>
+  </i-col>
+</i-row>
+

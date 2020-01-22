@@ -1,0 +1,6 @@
+<view class="stu">
+    <view class="warp" wx:for="{{studata}}" wx:for-item="item" wx:key="index">
+        <view>姓名：{{item.enlistName}}</view>
+        <view>手机号：{{item.enlistPhone}}</view>
+    </view>
+</view>

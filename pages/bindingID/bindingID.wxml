@@ -1,0 +1,30 @@
+<view class='bindID'>
+  <view class="bindID_head">
+    <image src="../../image/bindID.png" />
+    <view class="bindID_text">绑定编号</view>
+  </view>
+  <view class="bindID_table">
+    <form bindsubmit="back_houtai">
+      <view class="table_line">
+        <text>学生姓名</text>
+        <input class="weui-input" name='name' maxlength="10" />
+      </view>
+      <view class="table_line">
+        <text>学生身份证</text>
+        <input class="weui-input" name='serialNumber' maxlength="18" />
+      </view>
+      <!-- <view class="table_line">
+        <text>密码</text>
+        <input class="weui-input" name='password' password type="text" />
+      </view> -->
+      <view class="btn">
+        <button formType="submit">绑定</button>
+      </view>
+    </form>
+  </view>
+  <view class="bindID_company">
+    <view>0751sgcfjy.com</view>
+    <view>TEC:0751-8963228</view>
+    <view>韶关市超凡教育管理服务有限公司版本所有 Copynghi @ 2019</view>
+  </view>
+</view>

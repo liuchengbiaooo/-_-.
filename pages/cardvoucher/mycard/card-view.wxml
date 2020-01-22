@@ -1,0 +1,28 @@
+<i-message id="message" />
+
+<block wx:if="{{showPage}}">
+  <view class="weui-msg">
+    <view class="weui-msg__icon-area"><icon class="icon-box-img" type="info" size="93"></icon></view>
+    <view class="weui-msg__text-area">
+      <view class="weui-msg__title">您还没有优惠券~</view>
+    </view>
+  </view>
+</block>
+
+
+<view class='beijings vvsdvw' wx:for="{{cards}}" wx:key='key' wx:for-item="card"  wx:for-index="idxss">
+  <view class='cpcpsr'>
+    <view class="yhq-sum">
+      ¥<text>{{card.amount}}</text>
+    </view>
+    <view class='zlvcopp'>
+      <view class='xlclvtis'>{{card.title}}</view>
+      <view class='xlclvtis ssfwef'>满{{card.fullAmount}}可使用</view>
+      <view class='lllvwsd'>有效期: {{card.overdueDate}} 前使用</view>
+      <view class='lingqu'>
+          <input type='hidden' name="cardId" value='{{card.id}}' class='sofllwle'></input>
+          <button class="xuanhaole" bindtap="btnShiYong">立刻使用</button>
+      </view>
+    </view>
+  </view>
+</view>

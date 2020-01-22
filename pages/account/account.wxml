@@ -1,0 +1,96 @@
+<block wx:if="{{hasUserInfo}}">
+  <view class='top_back'> 
+    <image src="../../image/i-topbg.png" mode="widthFix"></image>
+    <view  class='lsife_12'>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.imgUrl}}" mode="cover"></image>
+    </view>
+    <view  class='lsife_13 ssdsfvfv'>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+
+    <view  class='vsgvc' bindtap="btnSignin">
+      <i-icon type="editor" color="#000" size="28" />
+      <view class='lclsdfw'>签到</view>
+    </view>
+  </view>
+</block>
+<block wx:else>
+  <view class='top_back'> 
+    <image src="../../image/i-topbg.png" mode="widthFix"></image>
+    <view  class='lsife_12'>
+      <i-button bind:click="handleClick" i-class="lsife_12_1" type="error" size="small" shape="circle">登陆</i-button>
+    </view>
+  </view>
+</block>
+
+<view class='vlvws'>
+<i-cell title="我的学分" is-link url="/pages/points/points" i-class="vsvs">
+  <i-icon type="redpacket"color="#f00" i-class="slfews" slot="icon" size="20"/>
+  <text class='clvws'>{{points}}</text>
+</i-cell>
+<i-cell title="我的课程券" is-link url="/pages/cardvoucher/mycard/card-view" i-class="vsvs">
+  <i-icon type="coupons_fill"color="#f00" i-class="slfews" slot="icon" size="20"/>
+  <text class='clvws'>{{cardvouchernum}}</text>
+</i-cell>
+<i-cell title="我的礼品单" is-link url="/pages/gift/view/mygift" i-class="vsvs">
+  <i-icon type="tasklist_fill"color="#f00" i-class="slfews" slot="icon" size="20"/>
+  <text class='clvws'>{{giftTotle}}</text>
+</i-cell>
+</view>
+
+<!--<i-cell title="我的订单" is-link url="/pages/order/view/order-list" i-class="vsvs"></i-cell>-->
+<!--<i-cell title="外卖订单" is-link url="/pages/sell/view/order-list" i-class="vsvs"></i-cell>-->
+<view class='vlvws'>
+<!--<i-cell title="我的地址" is-link url="/pages/shpto/shpto" i-class="vsvs">
+  <i-icon type="coordinates_fill"color="#00BFFF" i-class="slfews" slot="icon" size="20"/>
+</i-cell>-->
+<i-cell title="预约课程" is-link url="/pages/reserve/view/view" i-class="vsvs">
+  <i-icon type="clock_fill"color="#00BFFF" i-class="slfews" slot="icon" size="20"/>
+  <text class='clvws'>{{yuyueNumber}}</text>
+</i-cell>
+<i-cell title="关于我们" is-link url="/pages/aboutus/aboutus" i-class="vsvs">
+  <i-icon type="group_fill"color="#00BFFF" i-class="slfews" slot="icon" size="20"/>
+</i-cell>
+<i-cell title="机构入驻" is-link url="/pages/mechanism/enter" i-class="vsvs">
+  <i-icon type="add"color="#00BFFF" i-class="slfews" slot="icon" size="20"/>
+</i-cell>
+<i-cell title="学生管理" is-link url="/pages/bindingID/bindingID" i-class="vsvs">
+  <i-icon type="add"color="#00BFFF" i-class="slfews" slot="icon" size="20"/>
+</i-cell>
+<i-cell title="在线客服" is-link i-class="vsvs vvsvvvedgb" bind:click="toggleDialog">
+  <i-icon type="customerservice_fill"color="#00BFFF" i-class="slfews" slot="icon" size="20"/>
+  <!--<button class='vkmmxcfv' open-type="contact" bindcontact="handleContact"></button>-->
+</i-cell>
+
+</view>
+
+
+
+
+<view class="zan-dialog {{ showDialog ? 'zan-dialog--show' : '' }}">
+  <view class="zan-dialog__mask" bindtap="toggleDialog" />
+  <view class="zan-dialog__container">
+    <view class='lvvwvvbr'>
+      <view class='vsgegr'>
+        <image src="../../image/kefu.jpg" class='lsfvv' mode="widthFix"></image>
+      </view>
+      <view class='vsvergv'>
+        <i-row>
+          <i-col span="16" i-class="col-class">联系电话：{{business.web_phone}}</i-col>
+          <i-col span="8" i-class="col-class sfvvved">
+            <i-button bind:click="btnPhone" i-class='csvwrfvv' type="primary" size="small">拨打</i-button>
+          </i-col>
+        </i-row>
+      </view>
+      <view class='lvphepb'>
+        <i-button i-class='ggegbhg' open-type="contact" type="success" size="small">在线客服</i-button>
+      </view>
+    </view>
+    <view style='text-align: center;'>
+      <view class='slfwes' bindtap="toggleDialog">
+        <i-icon type="close" size="18" color="#ffffff"/>
+      </view>
+    </view>
+  </view>
+  
+</view>

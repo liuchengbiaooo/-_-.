@@ -1,0 +1,39 @@
+<view class="ccvsvdfv">
+  <i-row>
+    <i-col span="2" i-class="col-class dasdca sdvwsv"><i-icon type="search" size="22"/></i-col>
+    <i-col span="19" i-class="col-class dasdca">
+      <input name="keyword" value="{{keyword}}" class="weui-input" auto-focus bindconfirm='resignFocus' bindinput="keywordInput" bindfocus="activeFocus" placeholder="请输入{{current}}名称"/>
+    </i-col>
+    <i-col span="3" i-class="col-class sdvwsv">
+      <view bindtap="btnSearchKey">搜索</view>
+    </i-col>
+  </i-row>
+</view>
+
+<block wx:if="{{showPage}}">
+  <view class="weui-msg">
+    <view class="weui-msg__icon-area"><icon class="icon-box-img" type="info" size="93"></icon></view>
+    <view class="weui-msg__text-area">
+      <view class="weui-msg__title">暂时没有相关信息~</view>
+    </view>
+  </view>
+</block>
+
+
+<view class='cllsfvv' wx:for="{{datas}}" wx:for-item="product" wx:key='key'>
+  <navigator open-type="navigateTo" url="/pages/product/product?prodId={{product.id}}">
+    <i-row>
+      <i-col span="4" i-class="col-class sdgfvsvb">
+        <image mode="widthFix" class="weui-media-box__thumb" src="{{product.icon}}"/>
+      </i-col>
+      <i-col span="20" i-class="col-class gwegwf">
+        <view class="weui-media-box__title">{{product.name}}</view>
+        <p class="weui-media-box__desc xianshihangs">{{product.courseDesc}}</p>
+        <p class="weui-media-box__desc xianshihangs">已有<text class='csfv'>{{product.singupNum}}</text>人报名</p>
+        <p class="weui-media-box__desc xianshihangs">
+          <span class="amount">￥{{product.price}}</span>
+        </p>
+      </i-col>
+    </i-row>
+  </navigator>
+</view>

@@ -1,0 +1,14 @@
+<view>
+    <view>
+        <!-- wx:for="{{curriculum}}" wx:for-item="item" wx:key='key' -->
+        <view class="content">
+            <image class="content_img" src="{{curriculum.url}}" />
+            <view class="content_below">
+                <view class="content_below_left">
+                    <view class="overstriking">课程介绍：<text class="overstriking_txt">{{txt}}</text></view>
+                    <view class="content_below_txt">研学时间 ：{{curriculum.researchTime}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

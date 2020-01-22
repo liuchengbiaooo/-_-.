@@ -1,0 +1,93 @@
+page {
+  background-color: #dadada;
+}
+.dsloiefzc {
+  margin: 8px;
+  background-color: #fff;
+  padding: 10px;
+  font-size: 14px;
+}
+.wofweg {
+  line-height: 30px;
+  border-bottom: 1px solid #ccc;
+}
+.pvwrfv {
+  padding-top: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+.wfgf {
+  text-align: right;
+  
+}
+.asdw {
+  width: 60px;
+}
+.wfggbb {
+  text-align: right;
+}
+.wocpsc {
+  line-height: 30px;
+  text-align: right;
+}
+.wgwgsc {
+  line-height: 26px;
+}
+.coweflcs {
+  height: 80rpx;
+  position: fixed;
+  z-index: 999;
+  bottom: 0px;
+  width: 100%;
+  background: #888;
+  border-top: 1px solid #ccc;
+}
+.sfwgsac {
+  background-color: #fff;
+  line-height: 80rpx;
+  font-size: 14px;
+  padding-left: 20px;
+}
+.csfwefvz {
+  line-height: 80rpx;
+  font-size: 14px;
+  text-align:center;
+  background-color: rgb(241, 112, 6);
+  color: #fff;
+}
+.xuanhaole {
+  border: none;
+  background-color: rgb(241, 112, 6);
+  line-height: 80rpx;
+  height: 80rpx;
+  color: #fff;
+}
+.sfwwr {
+  padding: 0px!important;
+}
+.xuanhaole {
+  margin:0;
+  width:100%;
+  font-size:16px;
+  color:#fff;
+  font-weight:bold;
+  background: #f00;
+}
+.xuanhaole {
+  width: 100px;
+  line-height: 30px;
+  height: 30px;
+  display:inline-block;
+  margin-left: 10px;
+}
+.ssdfsdf {
+  background-color: #42b983;
+}
+.vvvwwf {
+  background-color: #ededed;
+  font-size: 12px;
+  color: #000;
+}
+.osovvv {
+  text-align: right;
+}

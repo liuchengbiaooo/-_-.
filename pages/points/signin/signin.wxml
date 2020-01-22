@@ -1,0 +1,61 @@
+<view class='head_slcc'>
+  <i-row>
+    <i-col span="10" i-class="col-class">
+      <button class='xlclvsdf' bindtap="calendarSign">
+        {{is_qd ? '已签到' : '签到'}}
+        <text class='vlvwows'>连续{{rule}}天</text>
+      </button>
+    </i-col>
+    <i-col span="14" i-class="col-class">
+      <view  class='ssdsfvfv'>
+        <view>签到领学分</view>
+        <view>
+          <i-icon type="financial_fill" color="#ffffff" size="18"/>
+          {{points}}个学分
+        </view>
+      </view>
+    </i-col>
+  </i-row>
+</view>
+
+<view class='buky'>{{currentDate}}</view>
+<view class="calendar">
+  <view class='bcfff'>
+    <view class="week">
+      <!--填补空格-->
+      <view wx:for="{{nbsp}}" wx:key='key'>\n</view>
+      <!--循环日期-->
+      <!-- 当天以前 -->
+      <view wx:for="{{date-1}}" style="color:gainsboro;" wx:key='key'>
+        <text wx:if="{{item+1==calendarSignData[item+1]}}" style="color: #2ccecb;">{{item+1}}</text>
+        <text wx:else="">{{item+1}}</text>
+      </view>
+      <!-- 当天 -->
+      <view style="">
+        <text wx:if="{{is_qd}}" style="color: #2ccecb;">{{date}}</text>
+        <text wx:else="" style="">{{date}}</text>
+      </view>
+      <!-- 以后 -->
+      <view wx:for="{{monthDaySize-date}}" wx:key='key'>{{item+date+1}}</view>
+    </view>
+  </view>
+  <!-- <view class="calendarSign">
+    <image bindtap="calendarSign" class='btnimg' src='../../../image/company-serve_03.png'></image>
+     wx:if="{{date!=calendarSignData[date]}}"
+  </view> -->
+</view>
+<!-- 签到成功 -->
+<view class='zhegai hide {{qdView?"block":""}}' bindtap='quxiaoQd'></view>
+<view class='successqd hide {{qdView?"block":""}}'>
+  <view class='qdtitle'>提示</view>
+   <view class='qdcontent' wx:if="{{is_qd}}">今天已经签过了~</view>
+  <view class='qdcontent' wx:else>签到成功，获得{{integral}}学分，您已连续签到{{rule}}天！</view>
+  <view class='queding' bindtap='quxiaoQd'>确定</view>
+</view>
+
+<view class='slcvlvwe'>
+  <view class='qd_title'>签到规则</view>
+  <view>这是签到规则</view>
+  <view class='clswvvv'>签到规则：参与签到活动可获得（5个）的学分奖励；如连续签到满7天，第7天还将额外获得10学分</view>
+  <view class='clswvvv'>连续签到规则：连续签到的日期不可中断，如日期中断，连续签到的天数会从1天开始计算；用户获得连续签到奖励后，只需每天保持签到不中断，即可获得连续签到奖励。</view>
+</view>

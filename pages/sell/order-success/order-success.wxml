@@ -1,0 +1,20 @@
+<view class="demos-header">
+  	<view class="demos-title">订单提交成功</view>
+  	<span>请您在{{order.deliveryDate}}时间之内完成订单支付</span>
+    <view class='slcc'>过时未付款订单自动取消</view>
+</view>
+
+<i-cell title="付款金额" value="{{order.actualAmount}}"></i-cell>
+<i-cell title="订单编号" value="{{order.orderNum}}"></i-cell>
+<i-cell title="订单状态" value="{{order.statusText}}"></i-cell>
+<i-cell title="下单时间" value="{{order.orderDate}}"></i-cell>
+
+<i-row>
+  <i-col span="12" i-class="col-class">
+    <i-button bind:click="handleClick" type="info" size="small">回到首页</i-button>
+  </i-col>
+  <i-col span="12" i-class="col-class">
+    <i-button bind:click="btnOrderPay" type="success" size="small">去付款</i-button>
+  </i-col>
+</i-row>
+

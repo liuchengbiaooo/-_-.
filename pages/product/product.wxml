@@ -1,0 +1,164 @@
+<import src="../../wxParse/wxParse.wxml" />
+<swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" duration="{{duration}}" interval='{{interval}}' bindchange="bindchange" circular="{{circular}}" style="height:{{imgheights[current]}}rpx;">
+  <block wx:for="{{product.list}}" wx:for-item="item" wx:key='key'>
+    <swiper-item>
+      <image src="{{item.url}}" data-id='{{index}}' class="slide-image" mode="widthFix" bindload="imageLoad" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class='title'>
+  <i-row>
+    <i-col span="16" i-class="col-class">
+      {{product.name}}
+      <text class='cwrewf'>￥{{product.price}}</text>
+    </i-col>
+    <i-col span="8" i-class="col-class fwvfwf">
+      <view class="ccasdfa">
+        <!-- <block wx:if="{{product.cartNumber > 0}}">
+            <span class="add sdwdss sdwdss_1_{{product.id}}" bindtap="btnChange" data-id="{{product.id}}" data-type="minus" >-</span>
+            <span class="cart_number sdwdss sdwdss_2_">{{product.cartNumber}}</span>
+          </block> -->
+        <span class="jian btnAdd sdfvvvvsvf {{product.cartNumber > 0 ? 'baomingle' : ''}}" bindtap="btnAddCart" data-name="?_qty{{product.id}}=1" data-index="{{index}}" data-calindex="{{product.id}}" data-image="{{product.icon}}">
+          立即报名
+        </span>
+      </view>
+    </i-col>
+  </i-row>
+</view>
+<i-tabs current="{{ current1 }}" bindchange="handleChange">
+  <i-tab key="tab1" title="课程信息"></i-tab>
+  <i-tab key="tab2" title="点评"></i-tab>
+  <!-- <i-tab key="tab3" title="店铺"></i-tab> -->
+</i-tabs>
+<view class='{{current1 == "tab1" ? "blockshow" : "blockhied"}} '>
+  <view class='vlvsfe'>
+    <view class='descs'>
+      <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+      <template is="wxParse" data="{{wxParseData:content1.nodes}}" />
+      <template is="wxParse" data="{{wxParseData:content2.nodes}}" />
+      <template is="wxParse" data="{{wxParseData:content3.nodes}}" />
+      <template is="wxParse" data="{{wxParseData:content4.nodes}}" />
+      <template is="wxParse" data="{{wxParseData:content5.nodes}}" />
+    </view>
+  </view>
+  <view class='lfpwpf'>
+    <view class='cart'>
+      <i-row>
+        <i-col span="18" i-class="col-class cart_left">
+          <view class='fwefwef' bindtap="handleOpen2">
+            <i-icon type="publishgoods_fill" size="26" color="#fff" />
+            <i-badge count="{{how}}" i-class="fwefew">
+              <view class="demo-badge"></view>
+            </i-badge>
+          </view>
+          <block wx:if="{{cart.length > 0}}">
+            <text class='hejisl'>合计：{{aggregate}}元</text>
+          </block>
+          <block wx:else>
+            <text class='hejisl'>请选择您的专属课程！</text>
+          </block>
+        </i-col>
+        <i-col span="6" i-class="col-class cart_reigth {{cart.length <= 0 ? 'fwfsfwe' : ''}}">
+          <view bindtap="btnCheckout">选好了</view>
+        </i-col>
+      </i-row>
+    </view>
+  </view>
+  <i-action-sheet visible="{{ visible2 }}" actions="{{ actions2 }}" show-cancel bind:cancel="handleCancel2" bind:click="btnCheckout" mask-closable="{{ false }}">
+    <view slot="header" style="padding: 16px">
+      <view style="color: #444;font-size: 16px; margin-bottom:12px;">我选的课程</view>
+      <view class='cartList' wx:for="{{cart}}" wx:key='key' wx:for-item="item">
+        <i-row>
+          <i-col span="8" i-class="col-class fwefwewsbvb">{{item.courseName}}</i-col>
+          <i-col span="8" i-class="col-class">{{item.total}}</i-col>
+          <i-col span="8" i-class="col-class gwrvwrg">
+            <view class="weui-count">
+              <span class="add btnOperation" bindtap="btnChange" data-type="minus" data-id="{{item.courseId}}" data-userId="{{item.userId}}">
+                -
+              </span>
+              <span class="cart_number btnCartQty">{{item.num}}</span>
+              <span class="jian btnOperation" bindtap="btnChange" data-type="add" data-id="{{item.courseId}}" data-userId="{{item.userId}}">
+                +
+              </span>
+            </view>
+          </i-col>
+        </i-row>
+      </view>
+    </view>
+  </i-action-sheet>
+</view>
+<view class='{{current1 == "tab2" ? "blockshow" : "blockhied"}} '>
+  <view class='zhonghepf'>
+    <view class='score'>{{business}}</view>
+    <i-rate bind:change="onChange1" value="{{business}}"></i-rate>
+    <view>课程评分</view>
+  </view>
+  <block wx:if="{{showPage}}">
+    <view class="weui-msg">
+      <view class="weui-msg__icon-area">
+        <icon class="icon-box-img" type="info" size="93"></icon>
+      </view>
+      <view class="weui-msg__text-area">
+        <view class="weui-msg__title">暂时还没有用户点评~</view>
+      </view>
+    </view>
+  </block>
+  <view class='lcosfewf'>
+    <view class="weui-panel" wx:for="{{comments}}" wx:key='key' wx:for-item="comment">
+      <i-row>
+        <i-col span="3" i-class="col-class">
+          <image src="{{comment.headimgurl}}" class='svxvbsfb' mode="widthFix"></image>
+        </i-col>
+        <i-col span="21" i-class="col-class">
+          <i-row>
+            <i-col span="12" i-class="col-class nickname">{{comment.nickName}}</i-col>
+            <i-col span="12" i-class="col-class cratedate">{{comment.createDate}}</i-col>
+          </i-row>
+          <view class='lcosvwwssvfv'>
+            <text>课程点评：</text>
+            <view class='vvszvbb'>
+              <i-rate bind:change="onChange1" value="{{comment.score}}"></i-rate>
+            </view>
+          </view>
+          <view class='lsvlv'>{{comment.scoreContent}}</view>
+          <block wx:if="{{comment.images != null}}">
+            <i-row i-class="cvvsdgvs">
+              <block wx:for="{{comment.images}}" wx:for-item="image" wx:key='key' wx:for-index="indImg">
+                <i-col span="8" i-class="col-class">
+                  <view class='zcvbdwe' data-comindex="{{index}}" data-image="{{image}}" bindtap="btnViewImage">
+                    <image src="{{image}}" mode="widthFix"></image>
+                  </view>
+                </i-col>
+              </block>
+            </i-row>
+          </block>
+        </i-col>
+      </i-row>
+    </view>
+  </view>
+</view>
+<!-- <view class='{{current1 == "tab3" ? "blockshow" : "blockhied"}} '>
+  
+  <i-cell title="{{business.web_site_title}}">
+    <i-icon type="computer" i-class="slfews" slot="icon" />
+  </i-cell>
+
+  <i-cell i-class="vsvda" title="{{business.web_site_desc}}"></i-cell>
+
+  <i-cell i-class="vsvda" bind:click="btnAnquanda" title="查看食品安全档案" is-link>
+    <i-icon type="document" i-class="slfews" slot="icon" />
+  </i-cell>
+
+  <i-cell i-class="vsvda" bind:click="btnPhone" title="联系电话：" value="{{business.web_phone}}" is-link>
+    <i-icon type="mobilephone" i-class="slfews" slot="icon" />
+  </i-cell>
+
+  <i-cell i-class="vsvda" title="配送时间：" value="{{business.web_site_keyword}}">
+    <i-icon type="clock" i-class="slfews" slot="icon" />
+  </i-cell>
+
+  <i-cell i-class="vsvda" bind:click="btnMap" title="{{business.web_address}}" is-link>
+    <i-icon type="coordinates" i-class="slfews" slot="icon" />
+  </i-cell>
+
+</view> -->

@@ -1,0 +1,79 @@
+<view class="ad_popError" wx:if="{{popErrorMsg}}">{{popErrorMsg}}</view>
+<view class="container">
+<view class="page-body">
+  <view class="page-section page-section-gap">
+    <map id="qqMap" style="width: 100%; height: 300px;" latitude="{{latitude}}" longitude="{{longitude}}" markers="{{markers}}" show-location></map>
+  </view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="btn-area">
+    <view style='text-align: right;'>
+    <button bindtap="moveToLocation" class="page-body-button" type="primary" size="mini">选择地址</button>
+    </view>
+    <!--<view>位置：{{mobileLocation.address}}</view>
+    <view>经度：{{mobileLocation.longitude}}</view>
+    <view>纬度：{{mobileLocation.latitude}}</view>-->
+
+    <view class="page-section">
+      <view class="page-section-title">地址:</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__bd">
+            <input class="weui-input" name="input" disabled="true" value='{{mobileLocation.address}}' name="address" placeholder="地址" />
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="page-section">
+      <view class="page-section-title">门牌号:</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__bd">
+            <input class="weui-input" name="input" value='{{mobileLocation.menpaihao}}' name="menpaihao" placeholder="楼层/门牌号等信息" />
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="page-section">
+      <view class="page-section-title">联系人:</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__bd">
+            <input class="weui-input" maxlength="8" name="input" placeholder="您的姓名" name="cttname" value='{{contacts.cttname}}'/>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="page-section">
+      <view class="page-section-title">联系电话:</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__bd">
+            <input maxlength="11" type="number" class="weui-input" name="input" placeholder="配送员联系您的方式" name="shpMobile" value='{{contacts.shpMobile}}'/>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="page-section">
+      
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">设置默认地址</view>
+          <view class="weui-cell__ft">
+            <switch checked name="defaulted" value="Y"/>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="btn-area" style='text-align: center;'>
+        <button class="mini-btn" type="warn" formType="submit" size="mini">保存</button>
+    </view>
+
+  </view>
+  </form>
+</view>
+</view>

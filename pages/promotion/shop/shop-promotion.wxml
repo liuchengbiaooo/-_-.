@@ -1,0 +1,51 @@
+<wxs module="numberUtil" src="../../dist/number.wxs"></wxs>
+<i-message id="message" />
+<form bindsubmit="formSubmit" bindreset="formReset" report-submit='true'>
+  <view class='slpwcll'>
+    <i-row>
+      <i-col span="6" i-class="col-class">
+        <image src="{{promotions.images}}" class="slide-image" mode="widthFix" /> 
+      </i-col>
+      <i-col span="18" i-class="col-class">
+        <view class='cwvwss'>
+          <view class='tetile'>{{promotions.name}}</view>
+          <view class='swwvbg'>￥{{numberUtil.numberFormat(promotions.price)}} 
+            <text class='vvsfscv'>￥{{numberUtil.numberFormat(promotions.marketPrice)}}</text>
+          </view>
+        </view>
+      </i-col>
+    </i-row>
+    <view class='lvvwgb'>
+      <i-row>
+        <i-col span="6" i-class="col-class">
+          <view class='tetile'>数量</view>
+        </i-col>
+        <i-col span="18" i-class="col-class">
+          <view class='cwvwssvsadv'>
+            <i-input-number value="{{ number }}" min="1" max="{{promotions.limit}}" bindchange="handleChange1" />
+          </view>
+        </i-col>
+      </i-row>
+    </view>
+  </view>
+  <view class='slpwcll'>
+    <i-input i-class="sdfcv" value="{{ name }}" name="name" title="姓名" placeholder="请输入您的名字" />
+    <i-input i-class="sdfcv" value="{{ phone }}" name="phone" type="number" title="手机号码" placeholder="请输入手机号" />
+  </view>
+
+
+  <view class='clvlsdd'></view>
+  <view class='coweflcs'>
+    <i-row>
+      <i-col span="12" i-class="col-class sfwgsac">
+        合计：<text class='cwrewf'>￥{{numberUtil.numberFormat(promotions.price * number)}}</text> 元
+      </i-col>
+      <i-col span="6" i-class="col-class csfwefvz">
+        <button class="xuanhaole vsvedg" bindtap="btnReturn">返回</button>
+      </i-col>
+      <i-col span="6" i-class="col-class csfwefvz">
+        <button class="xuanhaole" formType="submit">提交订单</button>
+      </i-col>
+    </i-row>
+  </view>
+</form>

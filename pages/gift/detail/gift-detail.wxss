@@ -1,0 +1,37 @@
+@import "../../../wxParse/wxParse.wxss";
+image {
+  display: block;
+}
+.lvwfvfvc {
+  padding: 12px;
+  padding-top: 0px;
+  font-size: 14px;
+  border-top: 1px solid #ccc;
+}
+.slf_title {
+  font-weight: bold;
+  line-height: 35px;
+  border-bottom: 1px solid #ccc;
+}
+.waccv text {
+  color: #f00;
+  font-weight: bold;
+}
+.gvbwe {
+  text-align: right;
+}
+.gvbwe text {
+  color: #f00;
+  font-weight: bold;
+}
+.lcowefa {
+  margin-top: 10px;
+  line-height: 25px;
+}
+.vwsedwacv {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+}

@@ -1,0 +1,125 @@
+page {
+  background-color: #dadada;
+}
+.section {
+  background-color: #fff;
+  padding: 12px;
+  margin-top: 8px;
+}
+.vvvsdf {
+  padding: 0!important;
+
+}
+.vsdvfsf {
+  padding-left: 0!important;
+  border-bottom: 1px solid #e9eaec;
+}
+.fsdfsg {
+  border-bottom: 1px solid #e9eaec;
+  padding: 6px 0!important;
+  text-align: right;
+}
+.sdfvsvsv {
+  border-bottom: 1px solid #e9eaec;
+  padding: 6px 0!important;
+}
+.sfsvvv {
+  margin-top: 6px;
+}
+.xuanhaole {
+  border: none;
+  background-color: rgb(241, 112, 6);
+  line-height: 80rpx;
+  height: 80rpx;
+  color: #fff;
+}
+.wocpsc {
+  font-size: 14px;
+}
+.wocpsc text {
+  color: #f00;
+}
+.fvvvs {
+  text-align: right;
+}
+.clvws {
+  position: absolute;
+  right:18px;
+  top:8px;
+  font-weight: bold;
+}
+.centens_title {
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #4169E1;
+}
+.lsflvvl {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 8px;
+}
+.list_wenan {
+  margin-top: 10px;
+  font-size: 12px;
+  padding-left: 10px;
+}
+.lvvlsfw {
+  margin-left: -10px;
+}
+.left_title {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  align-content: center;
+  text-align: center;
+  font-weight: bold;
+  color: #4169E1;
+}
+.left_desc {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  align-content: center;
+  margin-top: 6px;
+  height:35px;
+  color: #999;
+  font-size:11px;
+}
+.acsfdf {
+  text-align: left;
+}
+.lcsdvv {
+  font-size: 12px;
+  
+}
+.xuanhaole  {
+  background-color: #00BFFF;
+  margin: 0 60px;
+  line-height: 30px;
+  height: 30px;
+  font-size: 14px;
+}
+.slvvs {
+  margin-top: 15px;
+}
+.xkyouk_title {
+  font-weight: bold;
+  color: #4169E1;
+  margin-bottom: 8px;
+}
+.acsfdf {
+  margin-top: -5px;
+}
+.acsfdf image {
+  width: 80%;
+}
+.lvvvesrg {
+  margin-top: 15px;
+}

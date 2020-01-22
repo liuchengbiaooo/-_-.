@@ -1,0 +1,24 @@
+<view>
+    <view class="head">
+        <view class="head_lift">
+            <image src="../../image/chaofan.jpg" class="head_img" />
+            <view class="head_txt">课堂风采</view>
+        </view>
+        <view class="head_right">
+            <text>更多</text>
+            <image src="../../image/rightjiantou.png" class="head_right_img"/>
+        </view>
+    </view>
+    <view class="content">
+        <view class="content_warp" wx:for="{{classroomList}}" wx:for-item="item" wx:key="index">
+            <image src="{{item.icon}}" class="content_warp_img"/>
+            <view class="content_introduce">
+                <view >
+                    <view class="content_introduce_bold">{{item.title}}</view>
+                    <view class="content_introduce_lift">{{item.classTime}}</view>
+                </view>
+                <view class="content_warp_btn" bindtap="details" data-id="{{item.id}}">查看</view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,17 @@
+{
+  "navigationBarTitleText": "发表评论",
+  "usingComponents": {
+    "i-grid": "../dist/grid/index",
+    "i-grid-item": "../dist/grid-item/index",
+    "i-grid-icon": "../dist/grid-icon/index",
+    "i-grid-label": "../dist/grid-label/index",
+    "i-icon": "../dist/icon/index",
+    "i-row": "../dist/row/index",
+    "i-cell": "../dist/cell/index",
+    "i-col": "../dist/col/index",
+    "i-button": "../dist/button/index",
+    "i-card": "../dist/card/index",
+    "i-rate": "../dist/rate/index",
+    "i-message": "../dist/message/index"
+  }
+}

@@ -1,0 +1,15 @@
+<import src="../../wxParse/wxParse.wxml"/>
+<view>
+    <!-- <view wx:if="{{topData.length > 0}}">
+        <view class="topData" wx:for="{{topData}}" wx:for-item="item" wx:key="inde">{{item}}</view>
+    </view>
+    <view wx:if="{{imgURL !== ''}}">
+        <image bindload="imageLoad" src="{{imgURL}}"  style="width:{{imgWidth}}rpx; height:{{imgHeight}}rpx; "/>
+    </view>
+    <view wx:if="{{bottomData.length > 0}}">
+        <view class="bottomData" wx:for="{{bottomData}}" wx:for-item="item" wx:key="inde">{{item}}</view>
+    </view> -->
+    <view  class="topData" >
+        <template is="wxParse"  data="{{wxParseData:content.nodes}}"/>
+    </view>
+</view>

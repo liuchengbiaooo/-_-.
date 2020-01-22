@@ -1,0 +1,59 @@
+<view class='dsloiefzc'>
+  <view class='wofweg'>订单信息</view>
+  <view class='pvwrfv'>
+    <i-cell i-class="sfwwr" title="订单金额" value="¥{{order.orderActualAmount}}"></i-cell>
+    <i-cell i-class="sfwwr" title="订单编号" value="{{order.orderNum}}"></i-cell>
+    <i-cell i-class="sfwwr" title="配送运费" value="{{order.freightAmount}}"></i-cell>
+    <i-cell i-class="sfwwr" title="订单状态" value="{{order.textOrderStatus}}"></i-cell>
+    <i-cell i-class="sfwwr" title="下单时间" value="{{order.createdDate}}"></i-cell>
+    <view class='osovvv'>
+      <button class="xuanhaole vvvwwf" bindtap="btnPhone">
+        <i-icon type="mobilephone_fill" size="22" color="#000000"/>联系商家
+      </button>
+      <block wx:if="{{order.orderStatus == '10'}}">
+        <button class="xuanhaole" bindtap="btnCancelOrder">取消订单</button>
+        <button class="xuanhaole ssdfsdf" bindtap="btnOrderPay" >去付款</button>
+      </block>
+      <block wx:if="{{order.orderStatus == '40' && order.isComment != 'Y'}}">
+        <button class="xuanhaole ssdfsdf" bindtap="btnOrderComment">去发表评论</button>
+      </block>
+    </view>
+  </view>
+</view>
+
+
+<view class='dsloiefzc'>
+  <view class='wofweg'>收货地址</view>
+  <view class='pvwrfv'>
+    <i-cell i-class="sfwwr">
+        <view class="navigator-arrow">{{order.shpName}}    {{order.shpCellpone}}</view>
+        <view class="navigator-arrow">{{order.shpAddr}}</view>
+    </i-cell>
+  </view>
+</view>
+
+<view class='dsloiefzc'>
+  <view class='wofweg'>我的菜单</view>
+  <view class='pvwrfv' wx:for="{{order.orderItems}}" wx:for-item="item" wx:key='key'>
+    <i-row>
+      <i-col span="6" i-class="col-class">
+        <image src="{{item.images}}" class='asdw' mode="widthFix"></image>
+      </i-col>
+      <i-col span="10" i-class="col-class">
+        <view>{{item.name}}</view>
+        <view>x{{item.orderQty}}</view>
+      </i-col>
+      <i-col span="8" i-class="col-class wfggbb">
+        ￥{{item.totalAmount}}元
+      </i-col>
+    </i-row>
+  </view>
+
+  <view class='wocpsc'>
+    {{order.totalNum}}份， 合计：￥{{order.orderActualAmount}}元
+  </view>
+  <view class='wocpsc'>
+    配送费用：￥{{order.freightAmount}}元
+  </view>
+</view>
+

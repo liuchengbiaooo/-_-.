@@ -1,0 +1,26 @@
+<view class='guide'>
+  <view class='guide-swiper'>
+    <navigator hover-class='none' class='guide-img-box'>
+      <image mode='aspectFill' class='guide-img' src='/image/guide.jpg'></image>
+    </navigator>
+  </view>
+  <view class='guide-btn-area'>
+    <view class="btn_set">
+      <button class='guide-btn' open-type="getUserInfo" data-login='teacher' bindgetuserinfo='getUserInfo'>
+        教师中心
+      </button>
+      <button class='guide-btn ming' open-type="getUserInfo" data-login='patriarch' bindgetuserinfo='getUserInfo'>
+        家长中心
+      </button>
+    </view>
+    <checkbox-group bindchange="checkboxChange" class='guide-protocol'>
+      <label>
+        <checkbox checked="{{isChecked}}" />
+        我已阅读并同意
+      </label>
+      <navigator url='./userProtocol/userProtocol' hover-class='none' hover-stop-propagation='true' class='user-protocol'>
+        《 用户使用协议 》
+      </navigator>
+    </checkbox-group>
+  </view>
+</view>

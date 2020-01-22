@@ -1,0 +1,113 @@
+.svswgvvbtef {
+    border-radius: 5px;
+}
+
+.teacherLogin {
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+.csgbbdb {
+    border-bottom: 6rpx solid #D6D6D6;
+    padding-bottom: 0px;
+    margin-top: 8px;
+    background-color: #fff;
+}
+
+.curriculum {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: space-between;
+    color: rgb(110, 110, 110);
+}
+
+.curriculum_text {
+    width: 33.3%;
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 15rpx;
+}
+
+.curriculum_img {
+    width: 40px;
+    height: 40px;
+}
+
+.column {
+    border-bottom: 1rpx solid #C8C8C8;
+    display: flex;
+    height: 88rpx;
+    color: #6F6F6F;
+    justify-content: space-between;
+}
+
+.column_lift {
+    margin-top: 18rpx;
+    text-align: center;
+    width: 200rpx;
+    font-size: 22rpx;
+}
+
+.column_lift_font {
+    font-size: 28rpx;
+    color: #000;
+    font-weight: bold;
+}
+
+.column_right {
+    margin-top: 18rpx;
+    width: 120rpx;
+    display: flex;
+    font-size: 25rpx;
+}
+
+.column_right_img {
+    margin-top: -3rpx;
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.explain {
+    width: 100%;
+    border-bottom: 1rpx solid #DADADA;
+    display: flex;
+    font-size: 22rpx;
+    height: 124rpx;
+    color: #5F5F5F;
+    padding: 20rpx 0rpx 20rpx 10rpx;
+}
+
+.explain_img {
+    width: 220rpx;
+    height: 120rpx;
+}
+
+.explain_right {
+    margin: 12rpx 10rpx 0rpx 20rpx;
+}
+
+.explain_right_bold {
+    font-size: 28rpx;
+    color: #000;
+}
+
+.teacherLogin_bottom {
+    width: 100%;
+    height: 80rpx;
+    position: relative;
+    border-bottom: 1rpx dashed #C7C7C7;
+}
+
+.teacherLogin_bottom_txt {
+    position: absolute;
+    font-size: 18rpx;
+    width: 70rpx;
+    height: 50rpx;
+    background-color: #fff;
+    left: calc(50% - 35rpx);
+    top: 70rpx;
+    text-align: center;
+    color: rgb(136, 133, 133);
+}

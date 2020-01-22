@@ -1,0 +1,74 @@
+page {
+  background-color: #dadada;
+}
+.dsloiefzc {
+  margin: 8px;
+  background-color: #fff;
+  padding: 10px;
+  font-size: 14px;
+}
+.wofweg {
+  line-height: 30px;
+  border-bottom: 1px solid #ccc;
+}
+.pvwrfv {
+  padding-top: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+.wfgf {
+  text-align: right;
+  
+}
+.asdw {
+  width: 60px;
+}
+.wfggbb {
+  text-align: right;
+}
+.wocpsc {
+  line-height: 30px;
+  text-align: right;
+}
+.wgwgsc {
+  line-height: 26px;
+}
+.coweflcs {
+  height: 80rpx;
+  position: fixed;
+  z-index: 999;
+  bottom: 0px;
+  width: 100%;
+  background: #888;
+  border-top: 1px solid #ccc;
+}
+.sfwgsac {
+  background-color: #fff;
+  line-height: 80rpx;
+  font-size: 14px;
+  padding-left: 20px;
+}
+.csfwefvz {
+  line-height: 80rpx;
+  font-size: 14px;
+  text-align:center;
+  background-color: rgb(241, 112, 6);
+  color: #fff;
+}
+.xuanhaole {
+  border: none;
+  background-color: rgb(241, 112, 6);
+  line-height: 80rpx;
+  height: 80rpx;
+  color: #fff;
+}
+.clvlsdd {
+   height: 80rpx;
+ }
+.fsdfsg {
+  border-bottom: 1px solid #e9eaec;
+  padding: 6px 0!important;
+}
+ .wocpsc text {
+  color: #f00;
+}

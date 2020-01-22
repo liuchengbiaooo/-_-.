@@ -1,0 +1,84 @@
+page {
+  background-color: #DCDCDC;
+}
+.slpwcll {
+  padding: 12px;
+  background-color: #fff;
+  margin-bottom: 8px;
+}
+.slide-image {
+  border-radius: 5px;
+}
+.cwvwss {
+  margin-left: 12px;
+}
+.tetile {
+  font-size: 14px;
+}
+.swwvbg {
+  font-weight: bold;
+  font-size:16px;
+  color: #f00;
+  margin-top: 10px;
+}
+.vvsfscv {
+  font-size: 12px;
+  color: #999;
+  text-decoration:line-through;
+}
+.sdfcv {
+  padding:7px 0px!important;
+  border-bottom: 1px solid #dedede;
+}
+.coweflcs {
+  height: 80rpx;
+  position: fixed;
+  z-index: 999;
+  bottom: 0px;
+  width: 100%;
+  background: #888;
+  border-top: 1px solid #ccc;
+}
+.sfwgsac {
+  background-color: #fff;
+  line-height: 80rpx;
+  font-size: 14px;
+  padding-left: 20px;
+}
+.csfwefvz {
+  line-height: 80rpx;
+  font-size: 14px;
+  text-align:center;
+  background-color: rgb(241, 112, 6);
+  color: #fff;
+}
+.xuanhaole {
+  border: none;
+  background-color: rgb(241, 112, 6);
+  line-height: 80rpx;
+  height: 80rpx;
+  color: #fff;
+  font-size: 14px;
+}
+.clvlsdd {
+   height: 80rpx;
+ }
+.fsdfsg {
+  border-bottom: 1px solid #e9eaec;
+  padding: 6px 0!important;
+}
+ .wocpsc text {
+  color: #f00;
+}
+.cwvwssvsadv {
+  text-align: right;
+}
+.lvvwgb {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #e9eaec;
+}
+.vsvedg {
+  background-color: #696969;
+  border-radius: 0px;
+}

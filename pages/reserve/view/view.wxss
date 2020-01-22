@@ -1,0 +1,51 @@
+page {
+  background-color:#efeff4;
+}
+.lvckvs {
+  padding: 0 12px;
+  font-size: 14px;
+  padding-bottom: 12px;
+}
+.vvvss {
+  text-align: right;
+}
+.weui-panel {
+  margin-bottom: 8px;
+  background-color: #fff;
+}
+.ccsfsef {
+  border-bottom: 1px solid #efeff4;
+  line-height: 26px;
+}
+.vvvsdf {
+  padding: 0px!important;
+}
+.vwsvvvss {
+  text-align: left;
+  padding-left: 12px;
+}
+.wfggbb {
+  text-align: right;
+}
+.xuanhaole {
+  margin:0;
+  padding: 3px 10px;
+  width:100%;
+  font-size:16px;
+  color:#fff;
+  font-weight:bold;
+  background: #f00;
+}
+.xuanhaole {
+  width: 100px;
+  line-height: 20px;
+  display:inline-block;
+  margin-left: 10px;
+}
+.ssdfsdf {
+  background-color: #42b983;
+}
+.weui-form-preview__ft {
+  text-align:right;
+  padding-top: 12px;
+}

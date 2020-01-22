@@ -1,0 +1,56 @@
+<view class='head_slcc'>
+
+  <i-row>
+    <i-col span="5" i-class="col-class">
+      <view  class='lsife_12'>
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      </view>
+    </i-col>
+    <i-col span="14" i-class="col-class">
+      <view  class='lsife_13 ssdsfvfv'>
+        <view>{{userInfo.nickName}}</view>
+        <view>
+          <i-icon type="financial_fill" color="#ffffff" size="18"/>
+          {{points}}个学分
+        </view>
+      </view>
+    </i-col>
+    <i-col span="5" i-class="col-class">
+      <view  class='vsgvc' bindtap="btnSignin">
+        <i-icon type="editor" color="#ffffff" size="28" />
+        <view class='lclsdfw'>签到</view>
+      </view>
+    </i-col>
+  </i-row>
+
+</view>
+
+
+<view class='shouzhifming'>
+  <view class='titlessc'>学分明细</view>
+  <view class='lsfos'>
+    <view class='vlvsvv' wx:for="{{details}}" wx:for-item="detail" wx:key='key'>
+      <i-row>
+        <i-col span="16" i-class="col-class">
+          <view class='jifen_title'>{{detail.summary}}</view>
+          <view class='jifen_date'>{{detail.createdDate}}</view>
+        </i-col>
+        <i-col span="8" i-class="col-class">
+          <view class='jifelss {{detail.type == "10" ? "shouru" : "zhichu"}}'>{{detail.type == '10' ? '+' : '-'}}{{detail.points}}</view>
+        </i-col>
+      </i-row>
+    </view>
+    
+  </view>
+
+  
+<block wx:if="{{showPage}}">
+  <view class="weui-msg">
+    <view class="weui-msg__icon-area"><icon class="icon-box-img" type="info" size="93"></icon></view>
+    <view class="weui-msg__text-area">
+      <view class="weui-msg__title">您现在还没有学分~</view>
+    </view>
+  </view>
+</block>
+
+</view>

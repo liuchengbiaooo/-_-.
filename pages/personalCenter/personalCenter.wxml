@@ -1,0 +1,45 @@
+<view>
+    <view class="head">
+        <image src="../../image/bingIDTwo.jpg" class="head_img" />
+        <view class="head_conter">
+            <view class="head_right">
+                <image src="../../image/personage.png" class="head_right_img" />
+                <view>{{name}}</view>
+            </view>
+            <!-- <view class="head_right">
+                <image src="../../image/phoneTwo.png" class="head_right_img" />
+                <view>{{numberbiao}}</view>
+            </view> -->
+        </view>
+    </view>
+    <view>
+        <view class="headTwo">
+            <view class="headTwo_lift">
+                <image src="../../image/chaofan.jpg" class="headTwo_img" />
+                <view class="headTwo_txt">全部课程</view>
+            </view>
+            <view class="headTwo_right">
+                <text>更多</text>
+                <image src="../../image/rightjiantou.png" class="headTwo_right_img" />
+            </view>
+        </view>
+        <view class="content" wx:if="{{isshow}}" bindtap="gostudent">
+            <view class="content_list">
+                <image src="{{courseList.icon}}" class="content_list_img" />
+                <view class="content_list_txt">
+                    <view>课程名称 : {{courseList.name}}</view>
+                    <view>课程开始时间 : {{tiem}}</view>
+                    <view>上课时间 : {{courseList.courseTime}}</view>
+                    <view>课程介绍 : {{courseList.summary}}</view>
+                </view>
+                <!-- txt_red 字体红色 content_list_bg 背景颜色 -->
+                <view class="content_list_state txt_red">进行中</view>
+            </view>
+            
+        </view>
+        <!-- 没有课程 -->
+        <view wx:else class="no_course">
+            暂无课程
+        </view>
+    </view>
+</view>

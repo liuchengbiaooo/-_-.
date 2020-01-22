@@ -1,0 +1,27 @@
+<block wx:if="{{showPage}}">
+  <view class="weui-msg">
+    <view class="weui-msg__icon-area"><icon class="icon-box-img" type="info" size="93"></icon></view>
+    <view class="weui-msg__text-area">
+      <view class="weui-msg__title">您暂时还没有预约课程~</view>
+    </view>
+  </view>
+</block>
+
+<view class="weui-panel" wx:for="{{orders}}" wx:for-item="order" wx:key='key'>
+  	<i-cell title="预约课程" value="{{order.reserveType}}"></i-cell>
+    <view class='lvckvs'>
+      <i-row i-class="ccsfsef">
+        <i-col span="12" i-class="col-class">联系人姓名</i-col>
+        <i-col span="12" i-class="col-class vvvss">{{order.name}}</i-col>
+      </i-row>
+      <i-row i-class="ccsfsef">
+        <i-col span="12" i-class="col-class">联系人手机号</i-col>
+        <i-col span="12" i-class="col-class vvvss">{{order.phone}}</i-col>
+      </i-row>
+      <i-row i-class="ccsfsef">
+        <i-col span="12" i-class="col-class">预约状态</i-col>
+        <i-col span="12" i-class="col-class vvvss">{{order.status}}</i-col>
+      </i-row>
+      
+    </view>
+</view>

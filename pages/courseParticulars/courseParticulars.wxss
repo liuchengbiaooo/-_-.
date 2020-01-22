@@ -1,0 +1,35 @@
+.content {
+    width: 100%;
+    border-bottom: 1rpx dashed #6A92AC;
+    margin-bottom: 10rpx;
+    box-sizing: border-box;
+    padding: 20rpx;
+}
+
+.content_img {
+    width: 100%;
+    height: 300rpx;
+}
+
+.content_below {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.overstriking {
+    font-weight: bold;
+    font-size: 25rpx;
+}
+
+.content_below_left {
+    font-size: 22rpx;
+}
+
+.content_below_txt {
+    margin-top: 5rpx;
+}
+
+.overstriking_txt {
+    font-weight: normal;
+}

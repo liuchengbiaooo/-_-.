@@ -1,0 +1,97 @@
+<import src="../../../wxParse/wxParse.wxml"/>
+<wxs module="numberUtil" src="../../dist/number.wxs"></wxs>
+<i-toast id="toast" />
+
+<swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" duration="{{duration}}" interval='{{interval}}' bindchange="bindchange"  circular="{{circular}}" style="height:{{imgheights[current]}}rpx;">
+  <block wx:for="{{promotions.imgs}}" wx:for-item="img" wx:key='key'>
+    <swiper-item>
+      <image src="{{img.images}}" data-id='{{index}}' class="slide-image" mode="widthFix" bindload="imageLoad"/> 
+    </swiper-item>
+  </block>
+</swiper>
+<view class='lcowfsfv'>
+  <view>{{promotions.name}}</view>
+  <i-row>
+    <i-col span="16" i-class="col-class">
+      <view class='lfwewf'>
+        <text class='pwfer'>￥</text>
+        <text class='swwvbg'>{{numberUtil.numberFormat(promotions.price)}} </text>
+        <text class='vvsfscv'>￥{{numberUtil.numberFormat(promotions.marketPrice)}}</text>
+      </view>
+    </i-col>
+    <i-col span="8" i-class="col-class gvwrgvfcc">
+      <view class='lfwewf dzfvsfvs'>
+        <i-icon type="browse" size="22" color="#666"/> {{promotions.viewNumber}}
+      </view>
+    </i-col>
+  </i-row>
+  
+  <view class='vwsfgvwr'>
+    <i-row>
+      <i-col span="8" i-class="col-class"><text class='bsgves'>限购{{promotions.limit}}份</text></i-col>
+      <i-col span="16" i-class="col-class gvwrgvfcc">
+        <block wx:if="{{promotions.overdue}}">
+          距离结算: {{clock}}
+        </block>
+      </i-col>
+    </i-row>
+  </view>
+</view>
+
+<!--
+<view class='title wcvsff'>
+  <view class='cvopee'>商家信息</view>
+  <view  class='sllfw_title'>{{business.web_site_title}}</view>
+  <i-cell title="营业时间" i-class="vsvda" value="{{business.web_site_keyword}}">
+    <i-icon type="clock" i-class="slfews" slot="icon"/>
+  </i-cell>
+  <i-cell title="商家电话" bind:click="btnPhone" i-class="vsvda" value="{{business.web_phone}}" is-link>
+    <i-icon type="mobilephone" i-class="slfews" slot="icon" />
+  </i-cell>
+  <i-cell title="商家地址" bind:click="btnMap" i-class="vsvda" value="{{business.web_address}}" is-link>
+    <i-icon type="coordinates" i-class="slfews" slot="icon" />
+  </i-cell>
+</view>
+-->
+
+<view class='title wcvsff'>
+  <view class='cvopee'>报名须知</view>
+  <text class='xlvlppl'>{{promotions.summary}}</text>
+</view>
+
+<view class='content wcvsff'>
+  <view class='cvopee'>课程介绍</view>
+  <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+</view>
+
+<view style='height:40px;'></view>
+<view class='lpvcw'>
+  <i-row>
+    <i-col span="4" i-class="col-class vwfscc">
+      <navigator url="/pages/index/index" open-type="switchTab" hover-class="navigator-hover">
+        <i-icon type="homepage" size="20"/>
+        <view>首页</view>
+      </navigator>
+    </i-col>
+    <i-col span="4" i-class="col-class vwfscc fwfssc">
+      <view bindtap="btnShare">
+        <i-icon type="undo" size="20"/>
+        <view>分享</view>
+      </view>
+    </i-col>
+    <i-col span="4" i-class="col-class vwfscc fwfssc">
+      <navigator url="/pages/account/account" open-type="switchTab" hover-class="navigator-hover">
+        <i-icon type="mine" size="20"/>
+        <view>我的</view>
+      </navigator>
+    </i-col>
+    <i-col span="12" i-class="col-class cfwfefc fwfssc {{promotions.overdue ? '' : 'overdue'}}">
+
+      <view bindtap="btnShop">
+        {{promotions.overdue ? '立即报名' : '已结束'}}
+      </view>
+    </i-col>
+  </i-row>
+</view>
+
+<i-action-sheet visible="{{ visible1 }}" actions="{{ actions1 }}" show-cancel bind:cancel="handleCancel1" bind:click="handleClickItem1" />

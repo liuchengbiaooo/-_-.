@@ -1,0 +1,111 @@
+<i-message id="message" />
+<wxs module="numberUtil" src="../dist/number.wxs"></wxs>
+
+<form bindsubmit="formSubmit" bindreset="formReset" report-submit='true'>
+
+<view>
+  <image src="https://dz.dzcyxt.cn/static/images/chaofanxk.png" mode="widthFix"></image>
+</view>
+
+<view class="section" style="margin-top:2px;">
+  <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}" range-key="name">
+    <i-cell title="选择意向定制课程" is-link i-class="vvvsdf sdfvsvsv">
+      <text class='clvws'>{{multiArray[0][multiIndex[0]].name}}，{{multiArray[1][multiIndex[1]].name}}</text>
+    </i-cell>
+  </picker>
+
+  <i-input  i-class="vvvsdf fsdfsg" name="name" value="" title="联系人" placeholder="请输入联系人姓名" />
+  <i-input  i-class="vvvsdf fsdfsg" name="phone" value="" type="number" title="手机号码" placeholder="请输入手机号码" />
+  <i-input  i-class="vvvsdf fsdfsg" name="remarks" value="" title="课程需求" placeholder="请输入您的需求" />
+
+  <view style="margin-top:16px;">
+    <button class="xuanhaole" formType="submit">立即提交</button>
+  </view>
+</view>
+
+
+<view class="section">
+  <view class='centens_title'>选课痛点</view>
+  <view class='lsflvvl'>若您有以下选课困扰，超凡专业选课顾问为您排忧解难</view>
+  <view class='lvvlsfw'>
+    <i-row>
+      <i-col span="12" i-class="col-class">
+        <view class='list_wenan'>
+          <image src="https://dz.dzcyxt.cn/static/images/xk_01.png" mode="widthFix"></image>
+          <view class='left_title'>网络信息搜索</view>
+          <view class='left_desc'>广告信息多，无法精准获取课程及辨别真伪</view>
+        </view>
+      </i-col>
+      <i-col span="12" i-class="col-class">
+        <view class='list_wenan'>
+          <image src="https://dz.dzcyxt.cn/static/images/xk_02.png" mode="widthFix"></image>
+          <view class='left_title'>无法落地了解结果</view>
+          <view class='left_desc'>电话沟通与网络了解得不到想要的准确信息</view>
+        </view>
+      </i-col>
+      <i-col span="12" i-class="col-class">
+        <view class='list_wenan'>
+          <image src="https://dz.dzcyxt.cn/static/images/xk_03.png" mode="widthFix"></image>
+          <view class='left_title'>身边资源信息太局限</view>
+          <view class='left_desc'>资源少，认知片面。无法获取与了解更多专业优质机构</view>
+        </view>
+      </i-col>
+      <i-col span="12" i-class="col-class">
+        <view class='list_wenan'>
+          <image src="https://dz.dzcyxt.cn/static/images/xk_04.png" mode="widthFix"></image>
+          <view class='left_title'>浪费时间及考察成本</view>
+          <view class='left_desc'>没有具体了解把握信息，直接上门考察后得不到合适课程</view>
+        </view>
+      </i-col>
+    </i-row>
+  </view>
+</view>
+<view class="section">
+  <view class='centens_title'>超凡选课优势</view>
+  <view class='slvvs'>
+    <i-row>
+      <i-col span="4" i-class="col-class acsfdf">
+        <image src="../../image/los_1.png" mode="widthFix"></image>
+      </i-col>
+      <i-col span="20" i-class="col-class">
+        <view class='lcsdvv'>
+          <view class='xkyouk_title'>省心</view>
+          <view>提交课程需求，超凡专业选课顾问全方位为您定制匹配</view>
+        </view>
+      </i-col>
+    </i-row>
+  </view>
+  <view class='slvvs'>
+    <i-row>
+      <i-col span="4" i-class="col-class acsfdf">
+        <image src="../../image/los_3.png" mode="widthFix"></image>
+      </i-col>
+      <i-col span="20" i-class="col-class">
+        <view class='lcsdvv'>
+          <view class='xkyouk_title'>高效</view>
+          <view>根据您的需求，及时提供适合您的课程</view>
+        </view>
+      </i-col>
+    </i-row>
+  </view>
+  <view class='slvvs'>
+    <i-row>
+      <i-col span="4" i-class="col-class acsfdf">
+        <image src="../../image/los_2.png" mode="widthFix"></image>
+      </i-col>
+      <i-col span="20" i-class="col-class">
+        <view class='lcsdvv'>
+          <view class='xkyouk_title'>优选</view>
+          <view>甄选多家高标准优质机构课程，为您精准匹配</view>
+        </view>
+      </i-col>
+    </i-row>
+  </view>
+</view>
+<view class="section">
+  <view class='centens_title'>超凡选课流程</view>
+  <view class='lvvvesrg'>
+    <image src="https://dz.dzcyxt.cn/static/images/liuchengtu.png" mode="widthFix"></image>
+  </view>
+</view>
+</form>

@@ -1,0 +1,5 @@
+.warp {
+    font-size: 32rpx;
+    margin-top: 20rpx;
+    margin-left: 20rpx;
+}

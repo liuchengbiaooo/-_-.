@@ -1,0 +1,43 @@
+.clllxv {
+  background-color: #fff;
+  margin-bottom: 8px;
+}
+.lcvlvswv {
+  padding-bottom: 10px;
+  margin-left: 10px;
+}
+.shuffing-mask {
+  padding: 10px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+.sfasdfwefwe_sdfe {
+  font-size: 14px;
+}
+.fvwefvwe text{
+  color: #008B45;
+  font-weight: bold;
+}
+.slcvvv text {
+  font-size: 10px;
+  background-color: #008B45;
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+.vsdvsdf {
+  margin-top: -2px;
+}
+.vvswsf {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  align-content: center;
+}
+
+.shuffing-mask image {
+  height: 90px;
+}

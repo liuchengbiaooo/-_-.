@@ -1,0 +1,4 @@
+<i-toast id="toast" />
+<view class='head_sll'>
+  <image src="https://dz.dzcyxt.cn/static/images/zaxkt.png" mode="widthFix"></image>
+</view>

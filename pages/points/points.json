@@ -1,0 +1,11 @@
+{
+    "navigationBarBackgroundColor": "#FF69B4",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "我的学分",
+    "backgroundTextStyle": "light",
+    "usingComponents": {
+        "i-row": "../dist/row/index",
+        "i-col": "../dist/col/index",
+        "i-icon": "../dist/icon/index"
+    }
+}

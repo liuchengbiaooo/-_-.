@@ -1,0 +1,42 @@
+<i-message id="message" />
+
+<view class='zlzllzs'>
+
+  <form bindsubmit="handleClick" bindreset="formReset" report-submit='true'>
+    <view class='osoos'>
+      评价：
+      <view class='slslld'><i-rate  bind:change="onChange1" value="{{score}}"></i-rate></view>
+    </view>
+
+    <view class="section">
+      <textarea name="content" bindblur="bindTextAreaBlur" class='slowlfl' auto-height placeholder="亲，服务还满意吗？" />
+    </view>
+
+    <view class="question-images">
+      <i-row>
+        <block wx:for="{{images}}" wx:key="*this">
+          <i-col span="6" i-class="col-class vsdsfsfsx">
+            <view class='sdsdscc'>
+              <!-- 图片缩略图  -->
+              <image class="q-image" src="{{item}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview"  mode="widthFix"></image>
+              <!-- 移除图片的按钮  -->
+              <view class="q-image-remover" data-idx="{{index}}" bindtap="removeImage">删除</view>
+            </view>
+          </i-col>
+        </block>
+        <i-col span="6" i-class="col-class">
+          <view class='sdsdscc dvsdvzxx' size="mini" bindtap="chooseImage" wx:if="{{images.length < 9}}">
+            <view>添加</view>
+            <view>图片</view>
+          </view>
+        </i-col>
+      </i-row>
+    </view>
+
+
+    <view class="vvsdfs">
+      <button class="xuanhaole" formType="submit">提交评论</button>
+    </view>
+  </form>
+
+</view>

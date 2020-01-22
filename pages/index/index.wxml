@@ -1,0 +1,381 @@
+<wxs module="numberUtil" src="../dist/number.wxs"></wxs>
+<i-toast id="toast" />
+<view class='sfcoijvlsv'>
+  <i-row>
+    <i-col span="12" i-class="col-class">
+      <i-icon type="coordinates" size="22" color="#ffffff" />
+      <span class="fj_sjs">{{addressName}}</span>
+    </i-col>
+    <i-col span="12" i-class="col-class">
+      <i-button i-class="sfwwf" bind:click="btnClickUrl" size="small">
+        <i-icon type="search" size="18" />
+        请输入课程名称
+      </i-button>
+    </i-col>
+  </i-row>
+</view>
+<!-- height:{{imgheights[current] - 24}}rpx; -->
+<swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" duration="{{duration}}" interval='{{interval}}' bindchange="bindchange" circular="{{circular}}" style="padding:0 12px;">
+  <block wx:for="{{banners}}" wx:for-item="banner" wx:key='key'>
+    <swiper-item>
+      <navigator url="/pages/foodmenu/foodmenu" hover-class="navigator-hover">
+        <image src="{{banner.url}}" data-id='{{index}}' class="svswgvvbtef" mode="widthFix" bindload="imageLoad" />
+      </navigator>
+    </swiper-item>
+  </block>
+</swiper>
+<view class='scvlvogw'>
+  <text class='newbalc'>[最新报名]</text>
+  <text>{{newbaoming}}</text>
+</view>
+<view class='csgbbdb'>
+  <i-row>
+    <view class="curriculum">
+      <view class="curriculum_text" wx:for="{{categorys}}" wx:for-item="category" wx:key='key'>
+        <view wx:if="{{category.id == '27'}}">
+          <navigator url="/pages/interestStudies/interestStudies?categoryId={{category.id}}" hover-class="none">
+            <image src="{{category.icon}}" mode="widthFix" class="curriculum_img"></image>
+            <view>{{category.name}}</view>
+          </navigator>
+        </view>
+        <view wx:elif="{{category.id == '28'}}">
+          <navigator url="/pages/interest/interest?categoryId={{category.id}}" hover-class="none">
+            <image src="{{category.icon}}" mode="widthFix" class="curriculum_img"></image>
+            <view>{{category.name}}</view>
+          </navigator>
+        </view>
+        <view wx:else>
+          <navigator url="/pages/meals/meals?categoryId={{category.id}}" hover-class="none">
+            <image src="{{category.icon}}" mode="widthFix" class="curriculum_img"></image>
+            <view>{{category.name}}</view>
+          </navigator>
+        </view>
+      </view>
+      <!-- <view class="curriculum_text">
+        <image src="http://47.107.227.121:8014/static/index/youeryuan.png" mode="widthFix"></image>
+        <view>少儿</view>
+      </view>
+      <view class="curriculum_text">
+        <image src="http://47.107.227.121:8014/static/index/youeryuan.png" mode="widthFix"></image>
+        <view>少儿</view>
+      </view> -->
+    </view>
+    <!-- <block wx:for="{{categorys}}" wx:for-item="category" wx:key='key'>
+      <i-col span="4" i-class="col-class ">
+        <view class='clsfwfa'>
+          <navigator url="/pages/meals/meals?categoryId={{category.id}}" hover-class="none">
+            <image src="{{category.icon}}" mode="widthFix"></image>
+            <view>{{category.name}}</view>
+          </navigator>
+        </view>
+      </i-col>
+      <view></view>
+    </block> -->
+    <!-- <block>
+      <i-col span="6" i-class="col-class ">
+        <view class='clsfwfa'>
+          <navigator hover-class="none" url="/pages/collocation/collocation">
+            <image src="../../image/tuoguan.png" mode="widthFix"></image>
+            <view>兴趣</view>
+          </navigator>
+        </view>
+      </i-col>
+    </block>
+    <block>
+      <i-col span="6" i-class="col-class ">
+        <view class='clsfwfa'>
+          <navigator hover-class="none" url='/pages/nutritious/nutritious'>
+            <image src="../../image/canyin.png" mode="widthFix"></image>
+            <view>研学</view>
+          </navigator>
+        </view>
+      </i-col>
+    </block> -->
+  </i-row>
+</view>
+<view class='clvv'>
+  <navigator url="/pages/reserve/reserve" hover-class="none">
+    <image src="https://dz.dzcyxt.cn/static/images/698565.png" mode="widthFix"></image>
+  </navigator>
+</view>
+<!-- <block wx:if="{{showPage}}">
+  <i-cell i-class="sadcsvsd" title="领取优惠券" label="Coupon"  value="更多优惠券" is-link url="/pages/cardvoucher/coupon/coupon"></i-cell>
+</block> -->
+<block wx:if="{{promotionShow}}">
+  <block wx:if="{{promotionNum > 6}}">
+    <i-cell i-class="sadcsvsd" title="推荐课程" label="Recommended courses" value="更多活动 {{currentProms+1}}/{{promotions.length}}" is-link url="/pages/promotion/promotion"></i-cell>
+  </block>
+  <block wx:else>
+    <i-cell i-class="sadcsvsd" title="推荐课程" value="{{currentProms+1}}/{{promotions.length}}" label="Recommended courses"></i-cell>
+  </block>
+  <swiper indicator-dots="{{indicatorPrsDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" duration="{{duration}}" interval='{{interval}}' bindchange="bindPromschange" circular="{{circular}}" style="height:{{imgPromsheights[currentProms] + 220}}rpx;  background-color: #fff;">
+    <block wx:for="{{promotions}}" wx:for-item="item" wx:key='key'>
+      <swiper-item>
+        <view class='solfvvv'>
+          <navigator url="/pages/promotion/details/details?promotionId={{item.id}}" hover-class="navigator-hover">
+            <image src="{{item.imgs[0].images}}" data-id='{{index}}' class="slide-image" mode="widthFix" bindload="imageLoadPromtios" />
+            <view class='desocls'>
+              <view class='title'>{{item.name}}</view>
+              <i-row>
+                <i-col span="10" i-class="col-class">
+                  <view class='pricels'>
+                    <text>￥{{numberUtil.numberFormat(item.price)}}</text>
+                    元
+                    <text class='vvsfscv'>￥{{numberUtil.numberFormat(item.marketPrice)}}</text>
+                  </view>
+                </i-col>
+                <i-col span="14" i-class="col-class">
+                  <view class='yishoum'>
+                    <text class='csfv'>已有{{item.volume}}人报名</text>
+                    <button class="mini-btn {{item.overdue ? '' : 'overdue'}}" type="warn">
+                      {{item.overdue ? '立即报名' : '已结束'}}
+                    </button>
+                  </view>
+                </i-col>
+              </i-row>
+            </view>
+          </navigator>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</block>
+<!-- <i-tabs current="{{ tabcurrent }}" bindchange="handleChange">
+  <i-tab key="10" title="热门课程"></i-tab>
+  <i-tab key="20" title="附近机构"></i-tab>
+</i-tabs> -->
+<view class='{{tabcurrent == "10" ? "blockshow" : "blockhied"}} '>
+  <block wx:for="{{foodmenus}}" wx:for-item="item" wx:for-index="idx" wx:key='key'>
+    <block wx:if="{{idx == 0 || idx == 1}}">
+      <view class='clslflw'>
+        <view class='title'>[ {{item.name}} ]</view>
+      </view>
+      <!-- <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" duration="{{duration}}" interval='{{interval}}' bindMunechange="bindchange"  circular="{{circular}}" style="height:{{imgheightMenus[currentMune]}}rpx;">
+      <block wx:for="{{item.items}}" wx:for-item="banner">
+        <swiper-item>
+          <navigator url="/pages/product/product?prodId={{banner.prodId}}" hover-class="navigator-hover">
+            <image src="{{banner.images}}" data-id='{{index}}' mode="widthFix" bindload="imageMenuLoad"/> 
+          </navigator>
+        </swiper-item>
+      </block>
+    </swiper> -->
+      <view class='lcvlvswv'>
+        <i-row>
+          <block wx:for="{{item.items}}" wx:for-item="item" wx:key='key'>
+            <i-col span="12" i-class="col-class">
+              <navigator url="/pages/product/product?prodId={{item.prodId}}" hover-class="navigator-hover">
+                <view class='shuffing-mask'>
+                  <image src="{{item.images}}" mode="widthFix"></image>
+                  <view class='sfasdfwefwe_sdfe'>
+                    <text>{{item.name}}</text>
+                    <text class='cwrewf csfv'>￥{{item.price}}</text>
+                  </view>
+                  <view class='sfasdfwefwe_sdfe sdvbbbbd'>
+                    已有
+                    <text class='csfv'>{{item.volume}}</text>
+                    人报名
+                  </view>
+                </view>
+              </navigator>
+            </i-col>
+          </block>
+        </i-row>
+      </view>
+    </block>
+    <!-- <block wx:elif="{{idx == 1}}">
+    <view class='clllxv'>
+      <view class='clslflw'>
+        <view class='title'> {{item.name}} </view>
+      </view>
+      <view class='lcpfww'>
+        <swiper indicator-dots="{{indicatorss}}" vertical="{{vertical}}" autoplay="{{autoplayss}}" duration="{{duration}}" interval='{{interval}}' next-margin='420rpx' bindchange="bindchange"  circular="{{circular}}" style="">
+          <block wx:for="{{item.items}}" wx:for-item="item">
+            <swiper-item>
+              <navigator url="/pages/product/product?prodId={{item.prodId}}" hover-class="navigator-hover">
+                <view class='slielfs' style="margin:0 12px;">
+                  <view class='shuffing-mask'>
+                    <image src="{{item.images}}" class='slfvv'></image>
+                    <view class='sfasdfwefwe_sdfe'>
+                      <text>{{item.name}}</text>
+                      <text class='cwrewf csfv'>￥{{item.price}}</text>
+                    </view>
+                    <view class='sfasdfwefwe_sdfe sdvbbbbd'>
+                      已有<text class='csfv'>{{item.volume}}</text>人报名
+                    </view>
+                  </view>
+                </view>
+              </navigator>
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+    </view>
+  </block> -->
+    <block wx:else>
+      <view class='clllxv'>
+        <view class='clslflw'>
+          <view class='title'>[ {{item.name}} ]</view>
+        </view>
+        <view class='lcvlvswv'>
+          <i-row>
+            <block wx:for="{{item.items}}" wx:for-item="item" wx:key='key'>
+              <i-col span="12" i-class="col-class">
+                <navigator url="/pages/product/product?prodId={{item.prodId}}" hover-class="navigator-hover">
+                  <view class='shuffing-mask'>
+                    <image src="{{item.images}}" mode="widthFix"></image>
+                    <view class='sfasdfwefwe_sdfe'>
+                      <text>{{item.name}}</text>
+                      <text class='cwrewf csfv'>￥{{item.price}}</text>
+                    </view>
+                    <view class='sfasdfwefwe_sdfe sdvbbbbd'>
+                      已有
+                      <text class='csfv'>{{item.volume}}</text>
+                      人报名
+                    </view>
+                  </view>
+                </navigator>
+              </i-col>
+            </block>
+          </i-row>
+        </view>
+      </view>
+    </block>
+  </block>
+</view>
+<view class='{{tabcurrent == "20" ? "blockshow" : "blockhied"}} '>
+  <block wx:if="{{showsPage}}">
+    <view class="weui-msg">
+      <view class="weui-msg__icon-area">
+        <icon class="icon-box-img" type="info" size="93"></icon>
+      </view>
+      <view class="weui-msg__text-area">
+        <view class="weui-msg__title">暂时没有相关信息~</view>
+      </view>
+    </view>
+  </block>
+  <view class='cllsfvv' wx:for="{{merchants}}" wx:for-item="product" wx:key='key'>
+    <i-row>
+      <i-col span="6" i-class="col-class sdgfvsvb">
+        <image mode="widthFix" src="{{product.merchantHead}}" />
+      </i-col>
+      <i-col span="14" i-class="col-class gwegwf">
+        <view class="box__title">{{product.merchantName}}</view>
+        <view class="xianshihangs">{{product.address}}</view>
+        <view class="xianshihangs">
+          距离您
+          <span class="amount">{{product.distance}}</span>
+          km
+        </view>
+      </i-col>
+      <i-col span="4" i-class="col-class dcvsdvc">
+        <image mode="widthFix" bindtap="btnPhone" data-phone="{{product.cellphone}}" class="weui-media-box__thumb" src="../../image/phone.png" />
+      </i-col>
+    </i-row>
+  </view>
+</view>
+<!-- <i-cell i-class="sadcsvsd" title="学分兑换专区" value="点击查看" label="Integral Zone" is-link url="/pages/gift/gift-view"></i-cell> -->
+<block wx:if="{{githbanners.length > 0}}">
+  <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" duration="{{duration}}" interval='{{interval}}' bindchange="bindchangeGith" circular="{{circular}}" style="height:{{imgheightGitss[currentGits]}}rpx;  background-color: #fff;">
+    <block wx:for="{{githbanners}}" wx:for-item="gith" wx:key='key'>
+      <swiper-item>
+        <navigator url="/pages/gift/gift-view" hover-class="navigator-hover">
+          <image src="{{gith.imageUri}}" data-id='{{index}}' class="slide-image" mode="widthFix" bindload="imageGitsLoad" />
+        </navigator>
+      </swiper-item>
+    </block>
+  </swiper>
+</block>
+<!-- <view class='clllxv'>
+  <view class='lcvlvswv'>
+    <i-row>
+      <block wx:for="{{gifts}}" wx:for-item="item">
+        <i-col span="12" i-class="col-class">
+          <navigator url="/pages/gift/detail/gift-detail?giftId={{item.id}}" hover-class="navigator-hover">
+            <view class='shuffing-mask'>
+              <image src="{{item.imageName}}" ></image>
+              <view class='slcvvv'>
+                <text>积分兑换</text>
+              </view>
+              <view class='sfasdfwefwe_sdfe vvswsf'>
+                <text>{{item.giftName}}</text>
+              </view>
+              <view class='sfasdfwefwe_sdfe fvwefvwe'>
+                <i-icon type="redpacket" i-class="vsdvsdf" size="18" color="#008B45"/><text>{{item.exchangePoints}}</text>
+              </view>
+            </view>
+          </navigator>
+        </i-col>
+      </block>
+    </i-row>
+  </view>
+</view> -->
+<!-- <i-button bind:click="btnMeals" type="error" shape="circle" size="small">在线点餐</i-button>
+<view class='backwos' style='height:{{height}}px'>
+  <image src="../../image/axs.png" mode="widthFix"></image>
+  <view class='top_back'> 
+    <image src="../../image/i-topbg.png" mode="widthFix"></image>
+    <view  class='lsife_12'>
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="../../image/logo.png" mode="cover"></image>
+      </view>
+    <view  class='lsife_13'>
+      鼎众自助点餐
+    </view>
+  </view>
+
+  <view class='menu_ls1'>
+    <i-panel>
+      <i-cell i-class="cell-panel-demo" title="菜单" is-link url="/pages/account/card/voucher">
+        <i-icon type="collection_fill" i-class="slfews" slot="icon" />
+      </i-cell>
+    </i-panel>
+    <i-panel>
+      <i-cell i-class="cell-panel-demo" title="点餐" is-link url="/pages/account/order/index">
+        <i-icon type="createtask_fill" i-class="slfews" slot="icon" />
+      </i-cell>
+    </i-panel>
+    <i-panel>
+      <i-cell i-class="cell-panel-demo" title="外卖" is-link url="/pages/account/make/index">
+        <i-icon type="tasklist_fill" i-class="slfews" slot="icon" />
+      </i-cell>
+    </i-panel>
+    <i-panel>
+      <i-cell i-class="cell-panel-demo" title="在线预定" is-link url="/pages/account/make/index">
+        <i-icon type="computer_fill" i-class="slfews" slot="icon" />
+      </i-cell>
+    </i-panel>
+    <i-panel>
+      <i-cell i-class="cell-panel-demo" title="关于我们" is-link url="/pages/account/make/index">
+        <i-icon type="like_fill" i-class="slfews" slot="icon" />
+      </i-cell>
+    </i-panel>
+  </view>
+
+  
+</view>
+<view class='xlclvsdf' bindtap="btnSignin">
+  <image src="../../image/jigrz.png" mode="widthFix"></image>
+</view> -->
+<view class="zan-dialog {{ showDialog ? 'zan-dialog--show' : '' }}">
+  <view class="zan-dialog__mask" bindtap="toggleDialog" />
+  <view class="zan-dialog__container">
+    <image src="../../image/back.png" mode="widthFix"></image>
+    <view class='sdfvv' style='padding:20rpx;'>
+      <!-- <view class='clwfvcv'>邀请好友，即可得优惠券</view>
+      <view class='slcvwv'>￥10元</view>
+      <view>全场通用</view>
+      <image src="../../image/yhq.png" class='lcowfv' mode="widthFix"></image>
+      <view class='slcvwv'>￥30元</view> -->
+      <view class='vlsvv'>
+        <block wx:if="{{hasUserInfo}}">
+          <button class='scvsvv' hover-class="none" open-type="share">邀请好友得优惠券</button>
+        </block>
+        <block wx:else>
+          <button class='scvsvv' hover-class="none" bindtap="btnInvitation">邀请好友得优惠券</button>
+        </block>
+      </view>
+      <view class='slfwes' bindtap="toggleDialog">
+        <i-icon type="close" size="18" color="#ffffff" />
+      </view>
+    </view>
+  </view>
+</view>

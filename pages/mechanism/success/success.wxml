@@ -1,0 +1,19 @@
+<view class="demos-header">
+    <view class='lvsfvs'>
+      <i-icon type="success" size="100" color="#3cc51f"/>
+    </view>
+    <view class="demos-title">入驻申请提交成功</view>
+    
+</view>
+<view>
+  <i-button bind:click="handleClick" type="info" size="small">回到首页</i-button>
+  <i-button bind:click="btnOrderPay" type="success" size="small">课堂中心</i-button>
+</view>
+<!--<i-row>
+  <i-col span="12" i-class="col-class">
+    <i-button bind:click="handleClick" type="info" size="small">回到首页</i-button>
+  </i-col>
+  <i-col span="12" i-class="col-class">
+    <i-button bind:click="btnOrderPay" type="success" size="small">课堂中心</i-button>
+  </i-col>
+</i-row>-->

@@ -1,0 +1,25 @@
+
+  <view class="userinfo">
+    <image class="logo" src="../../image/logo.jpg" mode="cover"></image>
+    <text>超凡阳光课堂</text>
+    
+    
+  </view>
+  <view class="usermotto">
+    <view class='authorizessl'>
+      页面有该小程序开发，请确认授权一些信息
+    </view>
+    <view class='gongkaixix'>
+      .获取你的公开信息（昵称、头像等）
+    </view>
+    <button size="mini" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" type='primary'  bindgetuserinfo="getUserInfo"> 微信授权登陆 </button>
+    
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+
+    <button size="mini" class="btnCancelAuthorize" bindtap="cancelAuthorize" type='warn' >取消授权</button>
+
+  </view>
+

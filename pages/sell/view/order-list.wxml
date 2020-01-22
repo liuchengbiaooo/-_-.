@@ -1,0 +1,56 @@
+<block wx:if="{{showPage}}">
+  <view class="weui-msg">
+    <view class="weui-msg__icon-area"><icon class="icon-box-img" type="info" size="93"></icon></view>
+    <view class="weui-msg__text-area">
+      <view class="weui-msg__title">您现在还没有订单~</view>
+    </view>
+    <view class="weui-msg__opr-area">
+      <p class="weui-btn-area">
+        <button class="mini-btn" bindtap="btnCart" type="warn" size="mini">现在去购物~</button>
+      </p>
+    </view>
+  </view>
+</block>
+
+<view class="weui-panel" wx:for="{{orders}}" wx:for-item="order" wx:key='key'>
+  	<view class="weui-panel__hd">
+      <i-row>
+        <i-col span="8" i-class="col-class">{{order.orderNum}}</i-col>
+        <i-col span="8" i-class="col-class sfvwfx">{{order.orderStatus}}</i-col>
+        <i-col span="8" i-class="col-class vwrvw"><text class='cwrewf'>{{order.orderAmount}}</text>元</i-col>
+      </i-row>
+  	</view>
+  	<view class="weui-panel__hd fvvvwew">
+	    <view href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg"  wx:for="{{order.orderItem}}" wx:for-item="item" wx:key='key'>
+	      	<!--<view class="weui-media-box__hd">
+	        	<image class="weui-media-box__thumb" src="{{item.images}}" alt=""></image>
+	      	</view>
+	      	<view class="weui-media-box__bd">
+		        <view class="weui-media-box__title">{{item.name}} - <span style="color:#f00">{{item.title}}</span></view>
+		        <p class="weui-media-box__desc">数量：{{item.orderQty}}  单价：{{item.actualPrice}}/{{item.weight}}  小计：{{item.totalAmount}}</p>
+	      	</view>-->
+          <i-row>
+            <i-col span="6" i-class="col-class">
+              <image class="weui-media-box__thumb" src="{{item.images}}" alt="" mode="widthFix"></image>
+            </i-col>
+            <i-col span="18" i-class="col-class gwegwf">
+              <view class="weui-media-box__title">{{item.name}} - <span style="color:#f00">{{item.title}}</span></view>
+		          <p class="weui-media-box__desc">数量：{{item.orderQty}}  单价：<text class='cwrewf'>{{item.actualPrice}}</text>元  </p>
+              <view>小计：<text class='cwrewf'>{{item.totalAmount}}</text>元</view>
+            </i-col>
+          </i-row>
+	    </view>
+      
+			<view class="weui-form-preview__ft" wx:if="{{order.status}}">
+        <button class="xuanhaole" bindtap="btnCancelOrder" bindtap="btnCancelOrder" data-index="{{index}}" data-order="{{order.orderNum}}">取消订单</button>
+        <button class="xuanhaole ssdfsdf" bindtap="btnOrderPay" data-order="{{order.orderNum}}">去付款</button>
+      </view>
+      <view class="weui-form-preview__ft" wx:if="{{order.comment}}">
+        <button class="xuanhaole ssdfsdf" bindtap="btnOrderComment" data-order="{{order.orderNum}}">去发表评论</button>
+      </view>
+		
+  	</view>
+  	<view class="weui-panel__ft">   
+      <i-cell title="订单详情" is-link url="/pages/sell/order-detail/order-detail?orderNum={{order.orderNum}}"></i-cell>
+  	</view>
+</view>

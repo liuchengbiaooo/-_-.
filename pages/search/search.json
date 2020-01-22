@@ -1,0 +1,14 @@
+{
+    "navigationBarBackgroundColor": "#20a162",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "搜索",
+    "usingComponents": {
+        "i-button": "../dist/button/index",
+        "i-icon": "../dist/icon/index",
+        "i-row": "../dist/row/index",
+        "i-col": "../dist/col/index",
+        "i-rate": "../dist/rate/index",
+        "i-radio-group": "../dist/radio-group/index",
+        "i-radio": "../dist/radio/index"
+    }
+}

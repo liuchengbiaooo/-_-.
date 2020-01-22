@@ -1,0 +1,36 @@
+<wxs module="numberUtil" src="../dist/number.wxs"></wxs>
+
+<block wx:if="{{showPage}}">
+  <view class="weui-msg">
+    <view class="weui-msg__icon-area"><icon class="icon-box-img" type="info" size="93"></icon></view>
+    <view class="weui-msg__text-area">
+      <view class="weui-msg__title">暂时没有促销活动~</view>
+    </view>
+  </view>
+</block>
+
+<view class='clllxv'>
+  <view class='lcvlvswv'>
+    <i-row>
+      <block wx:for="{{promotions}}" wx:for-item="item" wx:key='key'>
+        <i-col span="12" i-class="col-class ">
+          <navigator url="/pages/promotion/details/details?promotionId={{item.id}}" hover-class="navigator-hover">
+            <view class='shuffing-mask'>
+              <image src="{{item.images}}" mode="widthFix"></image>
+              <view class='pricels'>
+                <text>￥{{numberUtil.numberFormat(item.price)}}</text>元
+              </view>
+              <view class='sfasdfwefwe_sdfe vvswsf'>
+                <text>{{item.name}}</text>
+              </view>
+              <view class='yishoum'>
+                <text>已售：{{item.volume}}</text>
+              </view>
+              <button class="mini-btn {{item.overdue ? '' : 'overdue'}}" type="warn">{{item.overdue ? '立即抢购' : '已结束'}}</button>
+            </view>
+          </navigator>
+        </i-col>
+      </block>
+    </i-row>
+  </view>
+</view>

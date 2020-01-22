@@ -1,0 +1,61 @@
+page {
+  background-color: #fff;
+}
+.zlzllzs {
+  padding: 12px;
+}
+.section {
+  border: 1px solid #d7d6dc;
+  padding: 12px;
+  margin-top: 12px;
+}
+.slowlfl {
+  width: 100%;
+  font-size: 14px;
+  min-height: 130px;
+}
+.osoos {
+  font-size: 14px;
+  position: relative;
+}
+.osoos .slslld {
+  position:absolute;
+  left: 45px;
+  top: -5px;
+}
+.vvsdfs {
+  margin-top: 12px;
+}
+
+.question-images{
+  margin-top: 12px;
+  margin-left: -8px;
+  
+}
+.sdsdscc {
+  margin-left: 8px;
+  height:77px;
+  border: 1px solid #ccc;
+  margin-bottom:5px;
+}
+.dvsdvzxx {
+  border: 1px solid #ccc;
+  font-size: 14px;
+  text-align: center;
+  color: #000;
+  width: 77px;
+  height:57px;
+  padding-top:20px;
+}
+.vsdsfsfsx {
+  position: relative;
+}
+.q-image-remover {
+  color: #f00;
+  font-size: 14px;
+  text-align: center;
+  position: absolute;
+  bottom:8px;
+  left:35px;
+
+}

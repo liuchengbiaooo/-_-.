@@ -1,0 +1,65 @@
+.vvsdvw {
+  margin: 8px;
+  box-shadow: 2px 2px 26px rgba(11, 23, 58, .1);
+  box-sizing: border-box;
+  
+  border-radius: 6px;
+}
+.cpcpsr {
+  height: 25vw;margin-top:0.5vw ;
+  background-image: url(https://www.dzcyxt.cn/website/images/company-popyhq.png);
+  background-size:100% 100%;
+  -moz-background-size:100% 100%;
+  padding: 12px;
+  position: relative;
+}
+.yhq-sum {
+  padding-left: 7px;
+  font-size: 16px;
+  color: #ff5000;
+  font-weight: bold;
+  box-sizing: border-box;
+  line-height: 25vw;
+}
+.yhq-sum text {
+  line-height: 25vw;
+  font-size: 40px;
+  font-weight: bold;
+  padding-left: 7px;
+}
+.zlvcopp {
+  position: absolute;
+  top: 10px;
+  left: 165px;
+}
+.xlclvtis {
+  font-size: 14px;
+  color: #ff5000;
+}
+.lllvwsd {
+  font-size: 12px;
+  color: #ff5000;
+}
+.ssfwef {
+  margin-top: 8px;
+}
+.xuanhaole {
+  margin:0;
+  padding: 3px 10px;
+  width:100%;
+  font-size:16px;
+  color:#fff;
+  font-weight:bold;
+  background: #f00;
+}
+.xuanhaole {
+  padding:0 0px;
+  height:26px;
+  line-height:26px;
+}
+.lingqu {
+  margin-top:10px;
+}
+.sofllwle {
+  display: none;
+}

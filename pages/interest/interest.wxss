@@ -1,0 +1,6 @@
+.topData {
+    /* font-size: 25rpx; */
+    padding: 0rpx 20rpx;
+    text-align: center;
+    line-height: 60rpx;
+}

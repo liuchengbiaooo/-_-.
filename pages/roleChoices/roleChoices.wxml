@@ -1,0 +1,20 @@
+<view class="roleChoices">
+    <view class="role_img">
+        <image src="/image/role.png" />
+    </view>
+    <view class="role_btn">
+        
+            <view class="btn_text" data-classify="patriarch" bindtap="skipPage">
+                
+                家长
+            </view>
+             <view class="btn_text" data-classify="teacher" bindtap='skipPage'>
+                
+                教师
+            </view>
+             <view class="btn_text" data-classify="organization" bindtap='skipPage'>
+                
+                机构入驻
+            </view>
+    </view>
+</view>
